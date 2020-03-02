@@ -14,8 +14,10 @@ import java.util.Map;
  * 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
  *
  * 遍历数组将map中的没有的数据存放 如则删除map中的
+ * 这样的方法效率比较低
  */
 public class singleNumber {
+
     public static int singleNumber(int[] nums) {
         int result=0;
         Map<Integer,Integer> map=new HashMap<>();
