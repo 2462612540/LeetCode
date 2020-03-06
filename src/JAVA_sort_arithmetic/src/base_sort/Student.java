@@ -5,7 +5,7 @@
  * Date:     2020/3/6 7:43
  * Description: 学生类
  */
-package JAVA_sort_arithmetic.src;
+package JAVA_sort_arithmetic.src.base_sort;
 
 public class Student implements Comparable<Student> {
     private String username;

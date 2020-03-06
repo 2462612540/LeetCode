@@ -7,7 +7,7 @@
  */
 package JAVA_sort_arithmetic.test;
 
-import JAVA_sort_arithmetic.src.Student;
+import JAVA_sort_arithmetic.src.base_sort.Student;
 
 public class TestComparable {
     public static void main(String[] args) {

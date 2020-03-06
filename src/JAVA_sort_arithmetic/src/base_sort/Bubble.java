@@ -5,10 +5,11 @@
  * Date:     2020/3/6 7:59
  * Description: 冒泡排序的过程
  */
-package JAVA_sort_arithmetic.src;
+package JAVA_sort_arithmetic.src.base_sort;
 
 public class Bubble {
     /**
+     * 重点是就是在每一个的排序中将最大或者是最小的放在第一个或者是最后一个
      * 比较和排序的两个重要
      * 比较的个数是越来越少的所以是从a.length-1 ----0的个数比较。j 是需要进行的比较的个数
      * Integer 是实现了Comparable的接口的
