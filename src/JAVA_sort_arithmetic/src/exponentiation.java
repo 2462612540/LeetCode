@@ -5,7 +5,7 @@
  * Date:     2020/3/4 17:29
  * Description: 求解一个数2的整数的幂
  */
-package JAVA_sort_arithmetic;
+package JAVA_sort_arithmetic.src;
 
 /**
  * 求解一个数2的整数的幂
