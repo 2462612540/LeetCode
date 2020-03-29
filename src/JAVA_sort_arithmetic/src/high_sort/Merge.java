@@ -17,7 +17,7 @@ public class Merge {
      */
     public static void sort(Comparable[] a) {
         //初始化一个辅助数组assist
-        assist = new Comparable[a.length];
+        Comparable[] assist = new Comparable[a.length];
         //定义一个lo变量 和hi分量 分别记录数组最小的和最大的数的索引
         int lo = 0;
         int hi = a.length - 1;
@@ -59,6 +59,7 @@ public class Merge {
         int i = lo;
         int p1 = lo;
         int p2 = mid + 1;
+
         //遍历的移动的p1和p2指针 比较对应的索引的值 找出最小的放入辅助数组中
         while (p1 <= mid && p2 <= hi) {
             //比较对应的大小值
@@ -67,6 +68,7 @@ public class Merge {
             } else {
                 assist[i++] = a[p2++];
             }
+
         }
         //如果是p1的指针的没有走完那么就是顺序移动的p1的指针 把对应的元素的放入到对应的辅助数组中对应大索引处
         while (p1 <= mid) {
