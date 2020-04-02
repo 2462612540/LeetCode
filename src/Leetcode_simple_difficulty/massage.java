@@ -10,8 +10,34 @@ package Leetcode_simple_difficulty;
 import org.junit.Test;
 
 public class massage {
+    public int massage2(int[] nums) {
+
+        int n = nums.length;
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return nums[0];
+        }
+        int[] dp = new int[n];
+        dp[0] = nums[0];
+        dp[1] = Math.max(nums[0], nums[1]);
+        for (int i = 2; i < n; i++) {
+            dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
+        }
+        return dp[n - 1];
+    }
 
     public int massage(int[] nums) {
+        for (int i=nums.length;i>0;i--){
+            for (int j=1;j<i;j++){
+                if (nums[j]>nums[j-1]){
+                    int temp=nums[j];
+                    nums[j]=nums[j-1];
+                    nums[j-1]=temp;
+                }
+            }
+        }
         int a = 0, b = 0;
         for (int i = 0; i < nums.length; i++) {
             int c = Math.max(b, a + nums[i]);
@@ -24,6 +50,6 @@ public class massage {
     @Test
     public void test() {
         int[] numbers = {2, 1, 4, 5, 3, 1, 1, 3};
-        System.out.println(massage(numbers));
+        System.out.println(massage2(numbers));
     }
 }
