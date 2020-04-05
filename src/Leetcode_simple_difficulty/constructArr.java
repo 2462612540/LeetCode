@@ -29,11 +29,28 @@ public class constructArr {
         return res;
     }
 
+    public int[] constructArr2(int[] a) {
+        int[] res = new int[a.length];
+        int temp = 1;
+        int temp1 = 1;
+        if (a.length != 0) {
+            for (int i = 0; i < a.length; i++) {
+                res[i] = temp;
+                temp *= a[i];
+            }
+            for (int j = a.length - 1; j >= 0; j--) {
+                res[j] = res[j] * temp1;
+                temp1 *= a[j];
+            }
+        }
+        return res;
+    }
+
     @Test
     public void test() {
         int[] nums = {1, 2, 3, 4, 5};
-       for (int a:constructArr(nums)){
-           System.out.println(a);
-       }
+        for (int a : constructArr2(nums)) {
+            System.out.println(a);
+        }
     }
 }
