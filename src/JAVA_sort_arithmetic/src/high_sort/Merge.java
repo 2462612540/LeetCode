@@ -41,7 +41,7 @@ public class Merge {
         int mid = lo + (hi - lo) / 2;
         //分别对每一组的数据进行排序
         sort(a, lo, mid);
-        sort(a, mid, hi);
+        sort(a, mid + 1, hi);
         //在把排序的数组进行归并
         merge(a, lo, mid, hi);
     }
@@ -93,20 +93,6 @@ public class Merge {
      */
     public static boolean greater(Comparable v, Comparable w) {
         return v.compareTo(w) > 0;
-    }
-
-    /**
-     * 交换位置
-     *
-     * @param a
-     * @param i
-     * @param j
-     */
-    public static void exch(Comparable[] a, int i, int j) {
-        Comparable temp;
-        temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
     }
 
 }

@@ -31,7 +31,7 @@ public class qiucksort {
 
     //对数组a中lo到hi之间的元素进行分组 并但会对应的分组界限的索引
     public static int partition(Comparable[] a, int lo, int hi) {
-        //确定分界值
+        //确定分界值设定第一个为分界值
         Comparable key = a[lo];
         //定义两个指针
         int left = lo;
@@ -44,7 +44,7 @@ public class qiucksort {
                 }
             }
             //在从左边想右边移动left  找到一个比分界值大的元素 停止
-            while (less(key, a[++left])) {
+            while (less(a[++left],key)) {
                 if (left == hi) {
                     break;
                 }
