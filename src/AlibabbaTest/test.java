@@ -7,48 +7,37 @@
  */
 package AlibabbaTest;
 
-import com.sun.corba.se.impl.orbutil.graph.Graph;
-import com.sun.corba.se.impl.orbutil.graph.GraphImpl;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class test {
+    //返回最长的字符创的长度
     public int test2(int n, String s1, String s2, String s3, String s4) {
-        Map<Character, Integer> map1 = new HashMap();
-        Map<Integer, Integer> map2 = new HashMap();
-        Map<Character, Integer> map3 = new HashMap();
-
-        map1.put(s1.charAt(0), 1);
-        map2.put(s2.length(), 1);
-        map3.put(s3.charAt(s1.length() - 1), 1);
-
+        String result = s1 + s2 + s3 + s4;
+        System.out.print(result);
+        System.out.println(result.length());
+        Set<Character> set = new TreeSet<>();
+        for (int i = 0; i < result.length(); i++) {
+            if (!set.contains(result.charAt(i))) {
+                set.add(result.charAt(i));
+            }
+        }
+        for (char value : set) {
+            System.out.print(value);
+        }
+        System.out.println(set.size());
         return 0;
-    }
-
-    public int test3(int n,int m) {
-        List<Integer> list=new ArrayList<>();
-        for (int i=0;i<n;i++){
-            list.add(i);
-        }
-        int index=0;
-        while (list.size()==1){
-            list.remove((index+m-1)%n);
-        }
-        return list.get(0);
     }
 
     @Test
     public void test() {
-        String str1 = new String("hello");
-        String str2 = new String("hello");
-        System.out.println(str1);
-        System.out.println(str2);
-        Graph G = new GraphImpl();
-        System.out.println(str1 == str2);//基本啥类型数据是比较的是数值 但是如果是西对象的话那么比较的是地址
-        System.out.println(str1.equals(str2));//这个是比较的是地址
+        int n = 4;
+        String s1 = "rstuvw";
+        String s3 = "abcdefgh";
+        String s2 = "opq";
+        String s4 = "abcdefghijk";
+        test2(n, s1, s2, s3, s4);
     }
 }
