@@ -10,7 +10,7 @@ package Leetcode_Medium_difficulty;
 import org.junit.Test;
 
 public class addTwoNumbers3 {
-    private class ListNode {
+    public class ListNode {
         int val;
         ListNode next;
 
@@ -19,59 +19,48 @@ public class addTwoNumbers3 {
         }
     }
 
-    /**
-     * 另两个链表的相加
-     *
-     * @param l1
-     * @param l2
-     * @return
-     */
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        //定义一个新的链表
-        ListNode n = new ListNode(0);
-        ListNode head=n;
-        int curr = 0;
-        while (l1 != null || l1 != null) {
-            int a = l1 != null ? l1.val : 0;
-            int b = l2 != null ? l2.val : 0;
-            int sum = a + b + curr;
-            curr = sum % 10;
-            ListNode node = new ListNode(sum / 10);
-            head.next = node;
-            head = node;
-            if (l1 != null) {
-                l1 = l1.next;
-            }
-            if (l2 != null) {
-                l2 = l2.next;
+    public ListNode removeElements(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+        ListNode resultListNode = head;
+        while (head.next != null) {
+            if (head.next.val == val) {
+                head.next = head.next.next;
+            } else {
+                head = head.next;
+                if (head == null) {
+                    break;
+                }
             }
         }
-        if (curr == 1) {
-            head.next = new ListNode(1);
+        if (resultListNode.val == val) {
+            return resultListNode.next;
         }
-        return head;
+        return resultListNode;
     }
 
     @Test
-    public void test() {
-        //链表1
-        ListNode L1 = new ListNode(1);
-        ListNode s2 = new ListNode(4);
-        ListNode s3 = new ListNode(5);
-        L1.next = s2;
-        s2.next = s3;
-        //链表2
-        ListNode L2 = new ListNode(1);
-        ListNode m2 = new ListNode(4);
-        ListNode m3 = new ListNode(1);
-        L2.next = m2;
-        m2.next = m3;
+    public void test2() {
+        ListNode s1 = new ListNode(1);
+        ListNode s2 = new ListNode(6);
+        ListNode s3 = new ListNode(3);
+        ListNode s4 = new ListNode(2);
+        ListNode s5 = new ListNode(6);
+        ListNode s6 = null;
 
-       ListNode n = addTwoNumbers(L1, L2);
-        while (n != null) {
-            System.out.println(n.val);
-            n = n.next;
+        s1.next = s2;
+        s2.next = s3;
+        s3.next = s4;
+        s4.next = s5;
+        s5.next = s6;
+
+        int target = 6;
+        ListNode newnode = removeElements(s1, target);
+
+        while (newnode != null) {
+            System.out.println(newnode.val);
+            newnode = newnode.next;
         }
     }
-
 }
