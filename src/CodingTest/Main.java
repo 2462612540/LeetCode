@@ -19,6 +19,48 @@ public class Main {
     public static void main(String args[]) {
 //        Input1();
         Input2();
+//        Input3();
+    }
+
+    public static Boolean testInput3(int a, int b, int number) {
+        int sum = 0;
+        for (int i = 1; i < number; i++) {
+            sum = a + b;
+            a = b;
+            b = sum;
+        }
+        if (sum % 3 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 3
+     * 1 1 3
+     * 1 1 4
+     * 2 6 8
+     */
+    public static void Input3() {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        List<Boolean> res = new ArrayList<>();
+        for (int i = 0; i < m; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int number = sc.nextInt();
+            //调用函数
+            res.add(testInput3(a, b, number));
+        }
+        for (Boolean va : res) {
+            System.out.println(va);
+        }
+    }
+
+    public static Boolean testInput2(int[] array) {
+
+        return true;
     }
 
     /**
@@ -31,13 +73,20 @@ public class Main {
      */
     public static void Input2() {
         Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            int number = sc.nextInt();
-            for (int i = 0; i < number; i++) {
-                List<Integer> list = new ArrayList<>();
-                list.add(sc.nextInt());
-                System.out.println(list.size());
+        List<Boolean> list = new ArrayList<>();
+        //前期输入
+        int m = sc.nextInt();
+        for (int i = 0; i < m; i++) {
+            int total = sc.nextInt();
+            int[] array = new int[total];
+            for (int j = 0; j < total; j++) {
+                array[j] = sc.nextInt();
             }
+            list.add(testInput2(array));
+        }
+        //打印输出
+        for (Boolean va : list) {
+            System.out.println(va);
         }
 
     }
