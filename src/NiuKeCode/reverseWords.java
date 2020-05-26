@@ -5,7 +5,7 @@
  * Date:     2020/3/4 12:40
  * Description: 给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序
  */
-package Leetcode_simple_difficulty;
+package NiuKeCode;
 
 public class reverseWords {
     public static String reverseWords(String s) {

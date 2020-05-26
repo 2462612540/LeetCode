@@ -5,7 +5,7 @@
  * Date:     2020/2/29 18:07
  * Description: 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。
  */
-package Leetcode_simple_difficulty;
+package NiuKeCode;
 
 /**
  * 分别遍历needle的数字 再去遍历haystack的位置，并记录好第一个相同的位置的值

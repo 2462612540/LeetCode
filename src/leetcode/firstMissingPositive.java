@@ -5,7 +5,7 @@
  * Date:     2020/3/2 9:29
  * Description: 给定一个未排序的整数数组，找出其中没有出现的最小的正整数。
  */
-package LeetCode_difficult;
+package leetcode;
 
 import java.util.HashMap;
 import java.util.Map;

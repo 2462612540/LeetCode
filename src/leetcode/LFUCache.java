@@ -5,7 +5,7 @@
  * Date:     2020/4/5 9:05
  * Description: LFU缓存
  */
-package LeetCode_difficult;
+package leetcode;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;

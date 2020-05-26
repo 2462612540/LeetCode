@@ -5,7 +5,7 @@
  * Date:     2020/5/6 13:26
  * Description: 测试练习1
  */
-package LeetCode_difficult;
+package leetcode;
 
 import org.junit.Test;
 
