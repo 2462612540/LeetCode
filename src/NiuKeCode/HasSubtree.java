@@ -20,19 +20,20 @@ public class HasSubtree {
     }
 
     public boolean HasSubtree(TreeNode root1, TreeNode root2) {
-        if (root1.val!=root2.val){
+        if (root1 == null || root2 == null) {
+            return false;
+        }
+        return help(root1, root2) || HasSubtree(root1.left, root2) || HasSubtree(root1.right, root2);
+    }
 
+    private boolean help(TreeNode root1, TreeNode root2) {
+        if (root2 == null) {
+            return true;
         }
-        //递归的终止条件是什么
-        if (root1.val == root2.val) {
-            HasSubtree(root1, root2);
+        if (root1 == null) {
+            return false;
         }
-        //递归的过程
-        else {
-            HasSubtree(root1.left, root2);
-            HasSubtree(root1.right, root2);
-        }
-        return true;
+        return root1.val == root2.val && help(root1.left, root2.left) && help(root1.right, root2.right);
     }
 
 }
