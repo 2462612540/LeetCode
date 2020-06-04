@@ -11,8 +11,14 @@ import org.junit.Test;
 
 public class findNthDigit44 {
     public int findNthDigit(int n) {
-        if (n < 0 || n >= Math.pow(2, 31)) {
-            return 0;
+        //确定n 是一个几位数字
+        //0-9 10
+        //10-99  90
+        // 3    900
+        long i = 1, s = 9;
+        int base = 1;
+        while (n - i * s > 0) {
+
         }
         return 0;
     }

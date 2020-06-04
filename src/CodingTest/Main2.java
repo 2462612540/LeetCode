@@ -7,9 +7,10 @@
  */
 package CodingTest;
 
-import java.util.*;
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class Main2 {
 
@@ -17,16 +18,13 @@ public class Main2 {
 
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
-
             int n = sc.nextInt();
             int m = sc.nextInt();
             int[] array = new int[n];
-
             HashMap<String, Integer> ha = new HashMap<>();
             for (int i = 0; i < n; i++) {
                 array[i] = sc.nextInt();
             }
-
             for (int j = 0; j < m; j++) {
                 String str = sc.next();
 
@@ -34,11 +32,8 @@ public class Main2 {
                     ha.put(str, ha.get(str) + 1);
                 } else {
                     ha.put(str, 1);
-
-
                 }
             }
-
             Arrays.sort(array);
             int[] shanping = new int[ha.size()];
             int t = 0;
@@ -47,7 +42,6 @@ public class Main2 {
                 shanping[t] = temp;
                 t++;
             }
-
             Arrays.sort(shanping);
             int b = 0;
             int summin = 0;
@@ -55,7 +49,6 @@ public class Main2 {
                 summin += shanping[k] * array[b];
                 b++;
             }
-
             int c = n - 1;
             int summax = 0;
             for (int k = shanping.length - 1; k >= 0; k--) {

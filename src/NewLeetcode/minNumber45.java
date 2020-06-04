@@ -12,32 +12,28 @@ import org.junit.Test;
 import java.util.Arrays;
 
 public class minNumber45 {
+
     public String minNumber(int[] nums) {
-        String s = "";
-        //转化为字符串
+        if (nums == null || nums.length == 0) return "";
+        String[] ss = new String[nums.length];
+        //数组转为的是string 类型 的数据
         for (int i = 0; i < nums.length; i++) {
-            s += String.valueOf(nums[i]);
+            ss[i] = String.valueOf(nums[i]);
         }
-        //分别存储为数组
-        int[] array = new int[s.length()];
-        for (int i = 0; i < s.length(); i++) {
-            array[i] = Integer.parseInt(String.valueOf(s.charAt(i)));
+        //关键是利用了排序的 重写方法  这个排序的规则的方法是一个核心
+        Arrays.sort(ss, (o1, o2) -> (o1 + o2).compareTo(o2 + o1));
+        //String[] 数组转化为string类型
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String s : ss) {
+            stringBuilder.append(s);
         }
-        Arrays.sort(array);
-        if (array[0] == 0) {
-            int temp = array[0];
-            array[0] = array[1];
-            array[1] = temp;
-        }
-        for (int val : array) {
-            System.out.print(val + " ");
-        }
-        return null;
+        return stringBuilder.toString();
     }
 
     @Test
     public void test() {
-        int[] array = {17,2};
-        minNumber(array);
+        int[] array = {17, 2};
+        String s = minNumber(array);
+        System.out.println(s);
     }
 }
