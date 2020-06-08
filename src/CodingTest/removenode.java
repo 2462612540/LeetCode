@@ -1,6 +1,6 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: LinkedListDemo
+ * FileName: removenode
  * Author:   xjl
  * Date:     2020/5/7 15:27
  * Description: 测试
@@ -10,7 +10,7 @@ package CodingTest;
 import java.util.HashSet;
 import java.util.Stack;
 
-public class LinkedListDemo {
+public class removenode {
     LinkNode head;
 
     class LinkNode {
@@ -118,7 +118,7 @@ public class LinkedListDemo {
     }
 
     public static void main(String[] args) {
-        LinkedListDemo list = new LinkedListDemo();
+        removenode list = new removenode();
         list.insert(1);
         list.insert(2);
         list.insert(6);
