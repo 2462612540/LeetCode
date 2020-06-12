@@ -2,24 +2,20 @@
  * Copyright (C), 2018-2020
  * FileName: threeSum15
  * Author:   xjl
- * Date:     2020/3/5 10:21
- * Description: 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组  来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/3sum 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ * Date:     2020/6/12 9:39
+ * Description: 三个数的和
  */
-package leetcode;
+package Array;
+
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * 1 排序
- * 2 判断最小的值是不是等于0
- * 3 左右去重
- * 4 左右加入数组中
- */
-public class threeSum {
+public class threeSum15 {
 
-    public static List<List<Integer>> threeSum(int[] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList();
         int len = nums.length;
         if (nums == null || len < 3) return result;
@@ -53,13 +49,11 @@ public class threeSum {
         return result;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
+
         int[] nums = {-1, 0, 1, 2, -1, -4};
-        for (List<Integer> list : threeSum(nums)) {
-            for (Integer i : list) {
-                System.out.println(i);
-            }
-        }
-        threeSum(nums);
+        List<List<Integer>> lists = threeSum(nums);
+
     }
 }
