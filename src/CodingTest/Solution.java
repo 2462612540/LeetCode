@@ -9,18 +9,5 @@ package CodingTest;
 
 public class Solution {
 
-    public String filterContent (String content) {
-        String result = "";
-        for (int i = 0; i < content.length(); i++) {
-            if (content.charAt(i) > '0' && content.charAt(i) <= '9') {
-                continue;
-            } else {
-                result += content.charAt(i);
-            }
-        }
-        System.out.println(result);
-        return result;
-    }
-
 
 }
