@@ -2,17 +2,19 @@
  * Copyright (C), 2018-2020
  * FileName: maxProfit121
  * Author:   xjl
- * Date:     2020/4/3 11:09
- * Description: 面试题63. 股票的最大利润
+ * Date:     2020/6/30 10:21
+ * Description: 121. 买卖股票的最佳时机
  */
-package leetcode;
+package Array;
 
 import org.junit.Test;
 
-public class maxProfit {
+public class maxProfit121 {
+
     public int maxProfit(int[] prices) {
         int min = Integer.MAX_VALUE;
         int max = 0;
+
         for (int i = 0; i < prices.length; i++) {
             if (prices[i] <= min) {
                 min = prices[i];
@@ -23,8 +25,10 @@ public class maxProfit {
     }
 
     @Test
-    public void tes() {
-        int[] numbers = {7, 1, 5, 3, 6, 4};
-        System.out.println(maxProfit(numbers));
+    public void test() {
+        int[] array = {7, 1, 5, 3, 6, 4};
+        int i = maxProfit(array);
+        System.out.println(i);
     }
+
 }
