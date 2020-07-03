@@ -10,22 +10,7 @@ package Array;
 public class movesToMakeZigzag1144 {
 
     public int movesToMakeZigzag(int[] nums) {
-        int count1 = 0;
-
-        for (int i = 0; i < nums.length; i += 2) {
-            if (i == 0) {
-
-            }
-            if (i == nums.length - 1) {
-
-            }
-        }
-
-        int count2 = 0;
-        for (int i = 1; i < nums.length; i += 2) {
-
-        }
-        return Math.min(count1, count2);
+        return 0;
     }
 
 }

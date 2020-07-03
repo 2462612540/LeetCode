@@ -15,10 +15,10 @@ public class numOfSubarrays1343 {
         int result = 0;
         for (int i = 0; i <= arr.length - k; i++) {
             int sum = 0;
-            for (int j = i; j < i + k; j++) {
-                sum += arr[j];
+            for (int j = 0; j < k; j++) {
+                sum += arr[i + j];
             }
-            if (sum >= threshold * k) {
+            if (threshold<=sum/k){
                 result++;
             }
         }
@@ -27,9 +27,8 @@ public class numOfSubarrays1343 {
 
     @Test
     public void test() {
-        int[] array = {11, 13, 17, 23, 29, 31, 7, 5, 2, 3};
-        int i = numOfSubarrays(array, 3, 5);
+        int[] array = {4,4,4,4};
+        int i = numOfSubarrays(array, 4, 1);
         System.out.println(i);
-
     }
 }
