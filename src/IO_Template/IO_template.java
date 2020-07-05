@@ -42,6 +42,7 @@ public class IO_template {
             for (int i = 0; i < n; i++) {
                 num2[i] = sc.nextInt();
             }
+
             //显示结果的代码
             System.out.println("输出：");
             System.out.println(Arrays.toString(num1));
