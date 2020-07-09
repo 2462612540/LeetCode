@@ -5,7 +5,7 @@
  * Date:     2020/6/23 9:15
  * Description: 923. 三数之和的多种可能
  */
-package Dynamic_programming;
+package DP;
 
 import org.junit.Test;
 
