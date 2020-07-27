@@ -44,6 +44,7 @@ public class DFS {
         if (index == nums.length) {
             result.add(change(list));
         } else {
+            //递归的开始
             for (int i = 0; i < nums.length; i++) {
                 if (!visit[i]) {
                     visit[i] = true;
@@ -55,7 +56,6 @@ public class DFS {
                 }
             }
         }
-
     }
 
     private static String change(ArrayList<String> list) {
