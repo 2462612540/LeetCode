@@ -1,15 +1,15 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: Main
+ * FileName: twonumber_big_sum
  * Author:   xjl
  * Date:     2020/7/28 19:52
  * Description: 4
  */
-package Tree;
+package Test_Pricate;
 
 import java.util.Scanner;
 
-public class Main {
+public class twonumber_big_sum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Double a = sc.nextDouble();

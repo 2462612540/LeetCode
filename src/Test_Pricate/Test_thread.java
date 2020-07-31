@@ -1,6 +1,6 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: Test
+ * FileName: Test_thread
  * Author:   xjl
  * Date:     2020/7/13 15:33
  * Description: 并发测试
@@ -9,7 +9,7 @@ package Test_Pricate;
 
 import java.util.concurrent.CountDownLatch;
 
-public class Test {
+public class Test_thread {
     public static void main(String[] args) {
         final CountDownLatch latch = new CountDownLatch(2);
         new Thread() {

@@ -7,39 +7,65 @@
  */
 package Tree;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Treemax {
-    //树的定义
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        public TreeNode(int val) {
-            this.val = val;
+    public static void DFS(ArrayList<Integer>[] arr, int[] happy, int root, int[][] dfs) {
+        dfs[root][0] = 0;          //领导不去
+        dfs[root][1] = happy[root];//领导去，则快乐值至少为自己快乐值
+        if (arr[root] != null) {
+            for (int i = 0; i < arr[root].size(); i++) {
+                int j = arr[root].get(i);
+                DFS(arr, happy, j, dfs);
+                dfs[root][0] += Math.max(dfs[j][0], dfs[j][1]);
+                dfs[root][1] += dfs[j][0];
+            }
         }
     }
 
-    public static void main(String[] args) {
-        //输入数据
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        TreeNode root = new TreeNode(sc.nextInt());
-        sc.nextLine();
-        String[] s = sc.nextLine().split(" ");
+    /**
+     * 3 1
+     * 5 1 1
+     * 1 2
+     * 1 3
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
+        Map<Integer,Integer> map=new HashMap<>();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] str1 = br.readLine().split(" ");
 
-        int[] array = new int[s.length];
-        for (int i = 0; i < s.length; i++) {
-            array[i] = Integer.valueOf(s[i]);
+        int num = Integer.parseInt(str1[0]);//公司总人数
+        int N = num + 1;
+
+        int root = Integer.parseInt(str1[1]);//根节点
+        String[] str2 = br.readLine().split(" ");
+
+        int[] happy = new int[N];
+
+        for (int i = 0; i < num; i++) {
+            happy[i + 1] = Integer.parseInt(str2[i]);//每个员工的快乐值
         }
-        Arrays.sort(array);
-        int result = array[array.length - 1];
+        //创建一个的Arraylist的数组
+        ArrayList<Integer>[] arr = new ArrayList[N];
 
-        //调用函数
-
-        //结果打印
-        System.out.println(result);
+        for (int i = 0; i < num - 1; i++) {
+            String[] str = br.readLine().split(" ");
+            int u = Integer.parseInt(str[0]);//起点
+            int v = Integer.parseInt(str[1]);//终点
+            if (arr[u] == null) {
+                arr[u] = new ArrayList<>();
+            }
+            arr[u].add(v);
+        }
+        int[][] dfs = new int[arr.length][2];
+        DFS(arr, happy, root, dfs);
+        System.out.println(Math.max(dfs[root][0], dfs[root][1]));
     }
 }

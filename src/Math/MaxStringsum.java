@@ -5,7 +5,7 @@
  * Date:     2020/7/27 12:57
  * Description: 大数相加的和
  */
-package Array;
+package Math;
 
 import java.util.ArrayList;
 import java.util.Scanner;
