@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main_6 {
+public class Main11 {
     public static void main(String[] args) {
         //int test = test();
         // System.out.println(test);

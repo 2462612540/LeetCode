@@ -44,7 +44,8 @@ public class Permutation46 {
 
     @Test
     public void test() {
-        int[] numbers = {1, 2, 3};
+        int[] numbers = {1, 1, 2};
+        List<List<Integer>> permute = permute(numbers);
         System.out.println(permute(numbers).toString());
     }
 }

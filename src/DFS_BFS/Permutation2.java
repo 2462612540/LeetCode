@@ -7,9 +7,9 @@
  */
 package DFS_BFS;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 
 public class Permutation2 {
 
@@ -17,8 +17,6 @@ public class Permutation2 {
         char[] array = str.toCharArray();
         ArrayList<String> result = new ArrayList<>();
         slove(array, result, 0, str.length());
-        result=new ArrayList<>(new HashSet<String>(result));//除重复操作
-        Collections.sort(result);
         return result;
     }
 
@@ -50,4 +48,28 @@ public class Permutation2 {
         return res.toString();
     }
 
+    public int reletive_7 (int[] digit) {
+       String Str="";
+       for (int i=0;i<digit.length;i++){
+           Str+=String.valueOf(digit[i]);
+       }
+        ArrayList<String> list = Permutation(Str);
+        int[] result=new int[list.size()];
+        for (int i=0;i<result.length;i++){
+            result[i]=Integer.valueOf(list.get(i));
+        }
+        int count=0;
+        for (int i=0;i<result.length;i++){
+            if (result[i]%7==0){
+                count++;
+            }
+        }
+        return count;
+    }
+    @Test
+    public void test(){
+        int[] arr={1,1,2};
+        int result = reletive_7(arr);
+        System.out.println(result);
+    }
 }
