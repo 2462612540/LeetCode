@@ -1,13 +1,13 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: MaxTwonumber
+ * FileName: Tree_length
  * Author:   xjl
  * Date:     2020/8/8 10:48
  * Description: 最远的距离
  */
 package Tree;
 
-public class MaxTwonumber {
+public class Tree_length {
     private static class TreeNode {
         int val;
         TreeNode left;

@@ -36,7 +36,7 @@ public class getIntersectionNode52 {
         ListNode ans = null;
         //遍历栈
         while (!stack1.isEmpty() && !stack2.isEmpty()) {
-            if (stack1.peek().val == stack2.peek().val) {
+            if (stack1.peek()== stack2.peek()) {
                 ans = stack1.peek();
                 stack1.pop();
                 stack2.pop();

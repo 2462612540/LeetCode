@@ -23,6 +23,27 @@ public class addTwoNumbers2 {
             val = x;
         }
     }
+    /**
+     * 反转链表
+     *
+     * @param head
+     * @return
+     */
+    public ListNode test11(ListNode head) {
+        ListNode dumpy = new ListNode(-1);
+        dumpy.next = head;
+
+        ListNode pre = dumpy;
+        ListNode curr = head;
+
+        while (curr.next != null) {
+            ListNode furtue = curr.next;
+            curr.next = furtue.next;
+            furtue.next = pre.next;
+            pre.next = furtue;
+        }
+        return dumpy.next;
+    }
 
     /**
      * 两个链表的相加
@@ -59,13 +80,13 @@ public class addTwoNumbers2 {
 
     @Test
     public void test() {
-        ListNode s1 = new ListNode(2);
-        ListNode s2 = new ListNode(4);
-        ListNode s3 = new ListNode(3);
+        ListNode s1 = new ListNode(7);
+        ListNode s2 = new ListNode(1);
+        ListNode s3 = new ListNode(6);
 
         ListNode s5 = new ListNode(5);
-        ListNode s6 = new ListNode(6);
-        ListNode s7 = new ListNode(4);
+        ListNode s6 = new ListNode(9);
+        ListNode s7 = new ListNode(2);
 
         s1.next = s2;
         s2.next = s3;
