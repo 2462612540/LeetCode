@@ -13,7 +13,7 @@ import java.util.Scanner;
 /**
  * 相加：add(BigInteger val);
  *    相减：subtract(BigInteger val);
- *    相乘：multiply(BigInteger val);
+ *    相乘：multiply43(BigInteger val);
  *    相除：divide(BigInteger val);
  *    最大公约数：gcd(BigInteger val);
  *    取模：mod(BigInteger val);
