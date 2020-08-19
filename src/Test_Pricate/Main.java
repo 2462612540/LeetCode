@@ -7,47 +7,59 @@
  */
 package Test_Pricate;
 
+import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        //数据的输入
-        Scanner cs = new Scanner(System.in);
-        String str = cs.nextLine().replace("\t", " ");
-        String[] s = str.split(" ");
-        if (s.length == 0) {
-            System.out.println(" ");
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+
+        boolean res = test(s1, s2);
+
+        System.out.println(res);
+
+    }
+
+    private static boolean test(String A, String B) {
+
+        int lenA = A.length();
+        int lenB = B.length();
+        if (lenA != lenB || lenA < 2 || lenB < 2) {
+            return false;
         }
-        //存放结果的
-        Stack<String> stack1 = new Stack<>();
-        //存放删除的
-        Stack<String> stack2 = new Stack<>();
-        String result = "";
-        for (int i = 0; i < s.length; i++) {
-            if (s[i].equals("")) {
+        if (A.equals(B)) {
+            HashSet<Character> set = new HashSet<>();
+            for (int i = 0; i < lenA; i++) {
+                if (set.contains(A.charAt(i))) {
+                    return true;
+                } else {
+                    set.add(A.charAt(i));
+                }
+            }
+            return false;
+        }
+
+        int count = 0;
+        int pre = -1, post = -1;
+        for (int i = 0; i < lenA; i++) {
+            if (count > 2) {
+                return false;
+            }
+            if (A.charAt(i) == B.charAt(i)) {
                 continue;
             }
-            if (s[i].equals("undo")) {
-                if (!stack1.isEmpty()) {
-                    stack2.add(stack1.peek());
-                    stack1.pop();
-                    continue;
+            else {
+                ++count;
+                if (pre == -1) {
+                    pre = i;
+                } else {
+                    post = i;
                 }
-            } else if (s[i].equals("redo")) {
-                if (!stack2.isEmpty()) {
-                    stack1.add(stack2.peek());
-                    stack2.pop();
-                    continue;
-                }
-            } else {
-                stack1.add(s[i]);
             }
         }
-        for (String ss : stack1) {
-            result += ss + " ";
-        }
-        System.out.println(result.trim());
+        return count == 2 && A.charAt(pre) == B.charAt(post) && A.charAt(post) == B.charAt(pre);
     }
 }
 
