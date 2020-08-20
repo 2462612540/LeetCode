@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class test {
+public class Main18 {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
         int k = 4;
