@@ -7,48 +7,31 @@
  */
 package Test_Pricate;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
-    /**
-     * 已知这个4行
-     *
-     * @param args
-     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //输入的行数
-        int m = sc.nextInt();
-        sc.nextLine();
-        ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < m; i++) {
-            list.add(sc.nextLine());
-        }
-        //函数的调用
-        String result = test(list);
-        System.out.println(result);
-    }
+        //输入的数量
+        String str=sc.nextLine();
+        int k=sc.nextInt();
 
-    private static String test(ArrayList<String> list) {
-        Collections.sort(list);
-        //记录一下最长的字符
-        String maxlength = "";
-        for (int i = 0; i < list.size(); i++) {
-            String str = list.get(i);
-            for (int j = 0; j < list.size(); j++) {
-                //判断是否可以拼接
-                if (list.get(j).charAt(0) >= str.charAt(str.length() - 1) && i != j) {
-                    str += list.get(j);
-                }
-                if (maxlength.length() <= str.length()) {
-                    maxlength = str;
-                }
+        int left=0;
+        int right=str.length();
+        int index=1;
+        while (k>0){
+            str=str.substring(left,right);
+            if (index%2!=0){
+                left++;
             }
+            else {
+                right--;
+            }
+            k--;
+            index++;
         }
-        return maxlength;
+        System.out.println(str);
     }
 }
 
