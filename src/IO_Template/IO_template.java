@@ -22,6 +22,49 @@ public class IO_template {
     }
 
     /**
+     * 有异常的输入结果  1, 2, 3
+     */
+    private static void IO() {
+
+        Scanner sc = new Scanner(System.in);
+        String oldstr = sc.nextLine().trim();
+        String str = "";
+        for (int i = 0; i < oldstr.length(); i++) {
+            if (oldstr.charAt(i) != ' ') {
+                str += oldstr.charAt(i);
+            }
+        }
+        System.out.println(str);
+    }
+
+    /**
+     * 输入的是 [1,2,3,4,5],[5,6,7,8,9]
+     */
+    private static void IO1() {
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine().trim();
+        String ans = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ']' || str.charAt(i) == '[') {
+                continue;
+            }
+            ans += str.charAt(i);
+        }
+        String[] split = ans.split(",");
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        for (int i = 0; i < split.length / 2; i++) {
+            list1.add(Integer.valueOf(split[i]));
+        }
+        for (int i = split.length / 2; i < split.length; i++) {
+            list2.add(Integer.valueOf(split[i]));
+        }
+        System.out.println(list1.toString());
+        System.out.println(list2.toString());
+    }
+
+    /**
      * 多行输入元素，其中第一行几个数字表示下面几行的个数。
      * // 输入如下
      * 输入的数据分别表示的是的数组的大小
