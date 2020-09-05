@@ -9,7 +9,7 @@ package 秋招笔试问题集合;
 
 import java.util.concurrent.CountDownLatch;
 
-public class Test_thread {
+public class 多线程测试 {
     public static void main(String[] args) {
         final CountDownLatch latch = new CountDownLatch(2);
         new Thread() {

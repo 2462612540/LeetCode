@@ -67,10 +67,8 @@ public class 多重背包问题 {
     }
 
     @Test
-    public void test(){
-        System.out.println(Math.pow(2,60)-Math.pow(10,9));
+    public void test() {
+        System.out.println(Math.pow(2, 60) - Math.pow(10, 9));
     }
-
-
 }
 
