@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import java.util.Scanner;
 
-public class Main14_multiple_pack {
+public class 多重背包问题 {
     public static void main(String[] args) {
 
         //数据的输入

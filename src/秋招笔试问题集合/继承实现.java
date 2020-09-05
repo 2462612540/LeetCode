@@ -23,20 +23,6 @@ public class 继承实现 {
         }
     }
 
-    class derived extends 秋招笔试问题集合.base {
-        public void printA() {
-            System.out.println("Drived A");
-        }
-
-        public void printB() {
-            System.out.println("Drived B");
-        }
-
-        public  void main(String[] args) {
-            秋招笔试问题集合.derived de = new 秋招笔试问题集合.derived();
-            de.printAB();
-        }
-    }
 }
 
 

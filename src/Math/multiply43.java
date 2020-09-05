@@ -27,7 +27,6 @@ public class multiply43 {
         if (num1.equals("0") || num2.equals("0")) {
             return "0";
         }
-        //num[i]* num2[j]:  res[i+j+1]      res[i+j]
         int n = num1.length();
         int m = num2.length();
         int[] res = new int[n + m];

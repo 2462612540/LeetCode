@@ -1,37 +1,24 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: Bignumber
+ * FileName: 大数相乘
  * Author:   xjl
- * Date:     2020/7/28 16:25
- * Description: 大整数
+ * Date:     2020/9/5 20:19
+ * Description:
  */
-package Math;
+package 秋招笔试问题集合;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
-/**
- * 相加：add(BigInteger val);
- * 相减：subtract(BigInteger val);
- * 相乘：multiply43(BigInteger val);
- * 相除：divide(BigInteger val);
- * 最大公约数：gcd(BigInteger val);
- * 取模：mod(BigInteger val);
- * N次方：pow(int exponent);
- */
-public class Bignumber {
+public class 大数相乘 {
     public static void main(String[] args) {
         //相加
         Scanner sc = new Scanner(System.in);
         String[] str = sc.nextLine().trim().replace("\"", "").split(",");
-        BigInteger x1 = new BigInteger(str[0]);
-        BigInteger x2 = new BigInteger(str[1]);
-        //相乘
-        BigInteger and = x1.multiply(x2);
-        System.out.println(and);
+        String res = multiply(str[0], str[1]);
+        System.out.println(res);
     }
 
-    public String multiply(String num1, String num2) {
+    public static String multiply(String num1, String num2) {
         if (num1.equals("0") || num2.equals("0")) {
             return "0";
         }
