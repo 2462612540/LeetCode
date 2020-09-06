@@ -1,18 +1,18 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: divide
+ * FileName: 两个数字相除
  * Author:   xjl
- * Date:     2020/8/14 13:20
- * Description: 相除
+ * Date:     2020/9/5 20:38
+ * Description:
  */
-package Math;
+package 数学问题;
 
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class divide {
+public class 两个数字相除 {
 
     public int divide(int dividend, int divisor) {
         long d1 = dividend;
@@ -47,7 +47,7 @@ public class divide {
     }
 
     @Test
-    public void test(){
+    public void test() {
         int divide = divide(10, 3);
         System.out.println(divide);
     }

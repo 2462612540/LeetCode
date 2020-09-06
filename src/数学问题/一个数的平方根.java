@@ -1,13 +1,14 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: Square
+ * FileName: 一个数的平方根
  * Author:   xjl
- * Date:     2020/8/9 21:57
- * Description: 平方根的实现
+ * Date:     2020/9/5 20:39
+ * Description:
  */
-package Math;
+package 数学问题;
 
-public class Square {
+public class 一个数的平方根 {
+
     public static void main(String[] args) {
         double sqrt = test(10, 0.02);
         System.out.println(sqrt);
@@ -96,5 +97,4 @@ public class Square {
         }
         return (high + low) / 2;
     }
-
 }

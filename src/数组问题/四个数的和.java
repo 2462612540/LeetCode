@@ -1,17 +1,18 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: fourSum18
+ * FileName: 四个数的和
  * Author:   xjl
- * Date:     2020/6/23 10:13
- * Description: 给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。  来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/4sum 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ * Date:     2020/9/6 9:48
+ * Description:
  */
-package Math;
+package 数组问题;
 
 import org.junit.Test;
 
 import java.util.*;
 
-public class fourSum18 {
+public class 四个数的和 {
+
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         Arrays.sort(nums);//排序

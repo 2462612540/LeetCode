@@ -1,15 +1,15 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: myPow50
+ * FileName: 一个数的n方
  * Author:   xjl
- * Date:     2020/8/14 13:50
+ * Date:     2020/9/6 9:45
  * Description:
  */
-package Math;
+package 数学问题;
 
 import org.junit.Test;
 
-public class myPow50 {
+public class 一个数的n方 {
 
     double quickMul(double x, long N) {
         double ans = 1.0;

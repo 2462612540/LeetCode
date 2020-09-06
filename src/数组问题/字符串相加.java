@@ -1,20 +1,17 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: MaxStringsum
+ * FileName: 字符串相加
  * Author:   xjl
- * Date:     2020/7/27 12:57
- * Description: 大数相加的和
+ * Date:     2020/9/6 9:44
+ * Description:
  */
-package Math;
+package 数组问题;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * 18798458748987589654887584
- * 875898748587968489578456984587
- */
-public class MaxStringsum {
+public class 字符串相加 {
+
     public static void main(String[] args) {
         //数据的输入
         Scanner sc = new Scanner(System.in);
