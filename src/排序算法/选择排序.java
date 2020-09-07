@@ -5,11 +5,11 @@
  * Date:     2020/5/31 21:41
  * Description: 选择排序
  */
-package Sort;
+package 排序算法;
 
 import org.junit.Test;
 
-public class SelectionSort {
+public class 选择排序 {
     /**
      * 选择排序
      *

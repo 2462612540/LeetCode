@@ -5,11 +5,11 @@
  * Date:     2020/3/19 15:28
  * Description: c插入排序
  */
-package Sort;
+package 排序算法;
 
 import org.junit.Test;
 
-public class InsertSort {
+public class 插入排序 {
     public static int[] Insertsort(int[] number) {
         for (int i = 1; i < number.length; i++) {
             for (int j = i; j >0; j--) {

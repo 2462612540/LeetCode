@@ -5,11 +5,11 @@
  * Date:     2020/6/4 16:24
  * Description: 归并的排序的原理
  */
-package Sort;
+package 排序算法;
 
 import java.util.Arrays;
 
-public class MergerSort {
+public class 归并排序 {
     //完成归并排序需要设置的辅助数组
     private static int[] assit;
 

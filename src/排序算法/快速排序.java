@@ -5,12 +5,12 @@
  * Date:     2020/6/11 15:55
  * Description: 快速排序
  */
-package Sort;
+package 排序算法;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class QuickSort {
+public class 快速排序 {
     //对数组的元素进行排序
     public static void sort(Comparable[] a) {
         int lo = 0;

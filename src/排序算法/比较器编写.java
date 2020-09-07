@@ -1,14 +1,14 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: Student
+ * FileName: 比较器编写
  * Author:   xjl
- * Date:     2020/5/31 21:10
- * Description: 学生测试类
+ * Date:     2020/9/6 10:00
+ * Description:
  */
-package Sort;
+package 排序算法;
 
-//对Comparable的接口的方法进行重写 对年龄大小进行排序
-public class Student implements Comparable<Student> {
+public class 比较器编写 {
+
     private String username;
     private int age;
 
@@ -34,10 +34,5 @@ public class Student implements Comparable<Student> {
                 "username='" + username + '\'' +
                 ", age=" + age +
                 '}';
-    }
-
-    @Override
-    public int compareTo(Student o) {
-        return this.getAge() - o.getAge();
     }
 }

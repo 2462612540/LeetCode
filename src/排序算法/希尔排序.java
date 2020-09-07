@@ -5,7 +5,7 @@
  * Date:     2020/6/4 15:56
  * Description: 希尔排序原理
  */
-package Sort;
+package 排序算法;
 
 import java.util.Arrays;
 
@@ -22,7 +22,7 @@ import java.util.Arrays;
  * h的减少的规则是
  * h=h/2;
  */
-public class ShellSort {
+public class 希尔排序 {
     /**
      * 希尔排序的原理
      *
