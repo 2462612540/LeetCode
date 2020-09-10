@@ -64,7 +64,7 @@ public class nthUglyNumber {
         }
 
         while (p1 < n) {
-            result[index] = array1[p1++];
+            result[index++] = array1[p1++];
         }
         while (p2 >= 0) {
             result[index++] = array2[p2--];
