@@ -56,19 +56,31 @@ public class nthUglyNumber {
         int p2 = m - 1;
 
         while (p1 < n && p2 >= 0) {
-            if (array1[p1] >= array2[p2]) {
+            if (array1[p1] <= array2[p2]) {
                 result[index++] = array1[p1++];
             } else {
                 result[index++] = array2[p2--];
             }
         }
+
         while (p1 < n) {
             result[index] = array1[p1++];
         }
         while (p2 >= 0) {
-            result[index] = array1[p1++];
+            result[index++] = array2[p2--];
         }
+
         return result;
+    }
+
+    @Test
+    public void test1() {
+        int[] array1 = {1, 3, 5, 8};
+        int[] array2 = {9, 6, 4};
+        int[] ints = arrayMerge(array1, 4, array2, 3);
+        for (int i : ints) {
+            System.out.print(i+"");
+        }
     }
 
 }
