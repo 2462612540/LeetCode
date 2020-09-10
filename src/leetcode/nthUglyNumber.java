@@ -9,6 +9,9 @@ package leetcode;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class nthUglyNumber {
 
     public int nthUglyNumber(int n) {
@@ -29,4 +32,43 @@ public class nthUglyNumber {
     public void test() {
         nthUglyNumber(10);
     }
+
+    public int[] arrayMerge1(int[] nums1, int m, int[] nums2, int n) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < m; i++) {
+            list.add(nums1[i]);
+        }
+        for (int i = 0; i < n; i++) {
+            list.add(nums2[i]);
+        }
+        Collections.sort(list);
+        int[] result = new int[m + n];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = list.get(i);
+        }
+        return result;
+    }
+
+    public int[] arrayMerge(int[] array1, int n, int[] array2, int m) {
+        int[] result = new int[m + n];
+        int index = 0;
+        int p1 = 0;
+        int p2 = m - 1;
+
+        while (p1 < n && p2 >= 0) {
+            if (array1[p1] >= array2[p2]) {
+                result[index++] = array1[p1++];
+            } else {
+                result[index++] = array2[p2--];
+            }
+        }
+        while (p1 < n) {
+            result[index] = array1[p1++];
+        }
+        while (p2 >= 0) {
+            result[index] = array1[p1++];
+        }
+        return result;
+    }
+
 }

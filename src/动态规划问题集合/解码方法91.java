@@ -7,6 +7,8 @@
  */
 package 动态规划问题集合;
 
+import java.util.HashMap;
+
 public class 解码方法91 {
 
     public int numDecodings(String s) {
@@ -36,6 +38,12 @@ public class 解码方法91 {
         return ans1 + ans2;
     }
 
+    /**
+     * i=len(s)-2开始
+     * dp [ i ] = dp[ i + 1 ] + dp [ i + 2 ]
+     * @param s
+     * @return
+     */
     public int numDecodings2(String s) {
         int len = s.length();
         int[] dp = new int[len + 1];
@@ -61,5 +69,71 @@ public class 解码方法91 {
             dp[i] = ans1 + ans2;
         }
         return dp[0];
+    }
+
+    public int numDecodings3(String s) {
+        HashMap<Integer, Integer> memoization = new HashMap<>();
+        return getAns(s, 0, memoization);
+    }
+
+    private int getAns(String s, int start, HashMap<Integer, Integer> memoization) {
+        //表示的是的s的长度 到了最后的一个分割位置
+        if (start == s.length()) {
+            return 1;
+        }
+        //如果还第一个位置为0 表示的是的0
+        if (s.charAt(start) == '0') {
+            return 0;
+        }
+        //判断之前是否计算过
+        int m = memoization.getOrDefault(start, -1);
+        if (m != -1) {
+            return m;
+        }
+        int ans1 = getAns(s, start + 1, memoization);
+        int ans2 = 0;
+        if (start < s.length() - 1) {
+            int ten = (s.charAt(start) - '0') * 10;
+            int one = s.charAt(start + 1) - '0';
+            if (ten + one <= 26) {
+                ans2 = getAns(s, start + 2, memoization);
+            }
+        }
+        //将结果保存
+        memoization.put(start, ans1 + ans2);
+        return ans1 + ans2;
+    }
+
+
+    public int numDecodings5(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        return dfs(s, 0);
+    }
+
+    //递归的套路，加一个index控制递归的层次
+    private int dfs(String s, int start) {
+        //递归的第一步，应该是加终止条件，避免死循环。
+        if (s.length() == start) {
+            return 1;
+        }
+        //以0位开始的数是不存在的
+        if (s.charAt(start) == '0') {
+            return 0;
+        }
+        //递归的递推式应该是如果index的后两位小于等于26，  
+        // dfs(s, start) = dfs(s, start+1)+dfs(s, start+2)   
+        // 否则dfs(s, start) = dfs(s, start+1)
+        int ans1 = dfs(s, start + 1);
+        int ans2 = 0;
+        if (start < s.length() - 1) {
+            int ten = (s.charAt(start) - '0') * 10;
+            int one = (s.charAt(start + 1) - '0');
+            if (ten + one <= 26) {
+                ans2 = dfs(s, start + 2);
+            }
+        }
+        return ans1 + ans2;
     }
 }

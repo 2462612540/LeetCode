@@ -73,7 +73,7 @@ public class 爬楼梯的基础题 {
      * @return
      */
     public int test(int n) {
-        return calway(n);
+        return calway(11);
     }
 
     private int calway(int n) {
@@ -82,4 +82,5 @@ public class 爬楼梯的基础题 {
         }
         return calway(n - 1) + calway(n - 2);
     }
+
 }
