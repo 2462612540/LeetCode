@@ -69,8 +69,10 @@ public class 打劫1 {
     public static int rob2(int[] nums) {
         int n = nums.length;
         if (n == 0) return 0;
+
         int[] memo = new int[n];
         Arrays.fill(memo, -1);
+
         memo[n - 1] = nums[n - 1];
         //表示考虑抢劫 nums[i…… n-1]所能获得最大收益
         for (int i = n - 2; i >= 0; i--) {

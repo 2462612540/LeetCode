@@ -5,7 +5,7 @@
  * Date:     2020/9/8 18:27
  * Description:
  */
-package 动态规划问题集合;
+package 深度优先广度优先问题;
 
 import java.util.Scanner;
 
