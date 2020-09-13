@@ -9,6 +9,7 @@ public class 字符串碎片 {
         if (str==null&&str.length()==0){
            return 0;
         }
+
         List<Integer> res=new ArrayList<>();
         char[] strChar=str.toCharArray();
         int len=str.length();
