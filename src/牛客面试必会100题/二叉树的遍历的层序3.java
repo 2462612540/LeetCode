@@ -1,18 +1,18 @@
 /**
  * Copyright (C), 2018-2020
- * FileName: levelOrder32III
+ * FileName: 二叉树的遍历的层序3
  * Author:   xjl
- * Date:     2020/8/20 18:28
- * Description: 层序遍历
+ * Date:     2020/9/14 9:23
+ * Description:
  */
-package Tree;
+package 牛客面试必会100题;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class levelOrder32III {
+public class 二叉树的遍历的层序3 {
 
     public class TreeNode {
         int val;
@@ -35,6 +35,7 @@ public class levelOrder32III {
         int sum = 1;
         //用来控制左边还是右边的输入的
         int num = 1;
+
         while (!queue.isEmpty()) {
             List<Integer> list = new LinkedList<>();
             int temp = 0;//保存当前层的下一层的节点
@@ -65,5 +66,4 @@ public class levelOrder32III {
         }
         return ans;
     }
-
 }

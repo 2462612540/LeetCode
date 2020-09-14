@@ -15,15 +15,15 @@ public class 一个数的平方根 {
     }
 
     public static double sqrt(double t, Double precise) {
-        //采用的是二分法的思想来实现的
-        double low = 0, high = t, middle, squre;
-        double prec = precise != null ? precise : 1e-7;
         //小于的的时候是不能采取的
         if (t < 0) {
             throw new RuntimeException("Negetive number cannot have a sqrt root.");
         }
-        //判断的什么时候会达到精度要求。
-        while (high - low > prec) {
+        //采用的是二分法的思想来实现的
+        double low = 0, high = t, middle, squre;
+        double prec = precise != null ? precise : 1e-7;
+        //判断的什么时候会达到精度要求
+        while ((high - low) > prec) {
             //中间值
             middle = (low + high) / 2;
             //中间值的平方
@@ -82,12 +82,11 @@ public class 一个数的平方根 {
     public static double test(double t, Double precise) {
         double low = 0, high = t, mid, square;
         double pre = precise != null ? precise : 1e-7;
-
         if (t < 0) {
             throw new RuntimeException("Negetive number cannot have a sqrt root.");
         }
         while ((high - low) > pre) {
-            mid = (high + low) / 2;
+            mid = low+(high-low)/2;
             square = mid * mid;
             if (square > t) {
                 high = mid;
