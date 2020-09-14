@@ -9,7 +9,6 @@ package 牛客面试必会100题;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class 二叉树的遍历的层序3 {
@@ -24,8 +23,8 @@ public class 二叉树的遍历的层序3 {
         }
     }
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> ans = new ArrayList<>();
+    public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
+        ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
         if (root == null) {
             return ans;
@@ -37,7 +36,7 @@ public class 二叉树的遍历的层序3 {
         int num = 1;
 
         while (!queue.isEmpty()) {
-            List<Integer> list = new LinkedList<>();
+            ArrayList<Integer> list = new ArrayList<>();
             int temp = 0;//保存当前层的下一层的节点
             while (sum > 0) {
                 TreeNode node = queue.poll();
