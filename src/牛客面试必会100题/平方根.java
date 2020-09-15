@@ -63,9 +63,27 @@ public class 平方根 {
         return left + (right - left) / 2;
     }
 
+    public double squart2(int x, Double pice) {
+        if (x < 0) return -1;
+        double left = 0;
+        double right = x;
+        double mid = 0;
+        pice = pice != null ? pice : 0;
+        while ((right - left) > pice) {
+            mid = left + (right - left) / 2;
+            if (mid * mid > x) {
+                right = mid;
+            } else {
+                left = mid;
+            }
+        }
+        return left + (right - left) / 2;
+
+    }
+
     @Test
     public void test() {
-        double sqrt = squart1(10, 0.0002);
+        double sqrt = squart2(10, 0.0002);
         System.out.println(sqrt);
     }
 }
