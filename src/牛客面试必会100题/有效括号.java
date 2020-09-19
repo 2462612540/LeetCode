@@ -60,4 +60,23 @@ public class 有效括号 {
         }
         return stack.isEmpty();
     }
+
+    public boolean isValid3(String s) {
+        Map<Character, Character> map = new HashMap<>();
+        map.put(')', '(');
+        map.put('}', '{');
+        map.put(']', '[');
+        char[] chr = s.toCharArray();
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < chr.length; i++) {
+            if (!map.containsKey(chr[i])) {
+                stack.push(chr[i]);
+            } else {
+                if (stack.isEmpty() || map.get(chr[i]) != stack.pop()) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
 }
