@@ -9,7 +9,7 @@ package 秋招笔试问题集合;
 
 import java.util.Scanner;
 
-public class Main {
+public class 刷墙问题 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();//大小
@@ -24,9 +24,9 @@ public class Main {
                 array2[j] = sc.nextInt();
             }
             boolean res = test11(array1, array2);
-            if (res){
+            if (res) {
                 System.out.println("YES");
-            }else {
+            } else {
                 System.out.println("NO");
             }
         }
@@ -50,13 +50,23 @@ public class Main {
                     return false;
                 }
                 //只能是从倒置回来
-                if (index >= i) {
+                if (index > i) {
                     while (index >= i) {
-                        array1[index--] = array2[i];
+                        array1[index] = array2[i];
+                        //控制的这个确定的数的不能发生变化
+                        if (array2[index]!=array1[index]){
+                            return false;
+                        }
+                        index--;
                     }
                 } else {
                     while (index <= i) {
-                        array1[index++] = array2[i];
+                        array1[index] = array2[i];
+                        //控制的这个确定的数的不能发生变化
+                        if (array1[index]!=array2[index]){
+                            return false;
+                        }
+                        index++;
                     }
                 }
             }
