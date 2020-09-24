@@ -9,6 +9,8 @@ package 牛客面试必会100题;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class 链表的合并 {
     //定义节点
     class ListNode {
@@ -77,6 +79,22 @@ public class 链表的合并 {
             res = res.next;
         }
 
+    }
+
+    /**
+     *  利用的归并的思想 两个两个合并来实现
+     * @param lists
+     * @return
+     */
+    public ListNode mergeKLists1(ArrayList<ListNode> lists) {
+        if (lists == null || lists.size() < 1) return null;
+        if (lists.size() == 1) return lists.get(0);
+        if (lists.size() % 2 != 0) lists.add(null);
+        ArrayList<ListNode> sum = new ArrayList<>();
+        for (int i = 0; i < lists.size(); i += 2) {
+            sum.add(mergeTwoLists(lists.get(i), lists.get(i + 1)));
+        }
+        return mergeKLists1(sum);
     }
 
 }
