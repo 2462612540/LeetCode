@@ -9,7 +9,7 @@ package 秋招笔试问题集合;
 
 import java.util.ArrayList;
 
-public class Main {
+public class 素数 {
     static class ListNode {
         Character val;
         ListNode next;
