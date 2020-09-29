@@ -9,7 +9,7 @@ package 牛客面试必会100题;
 
 import org.junit.Test;
 
-public class 数组的最大和 {
+public class 连续数组的最大和 {
     /**
      * 利用的是子数组的问题
      *
