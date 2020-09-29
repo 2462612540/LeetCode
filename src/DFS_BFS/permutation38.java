@@ -50,7 +50,7 @@ public class permutation38 {
         List<Character> list = new ArrayList<>();
 
         help(chars, 0, list, visit);
-        //处重复
+        //去重复
         List<String> res1 = new ArrayList<>();
         for (int i = 0; i < res.size(); i++) {
             if (!res1.contains(res.get(i))) {
