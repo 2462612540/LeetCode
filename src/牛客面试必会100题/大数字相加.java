@@ -27,11 +27,32 @@ public class 大数字相加 {
      * 利用的字串串的相加
      */
 
-    public String solve1(String s, String t) {
-        String ns1 = new StringBuilder(s).reverse().toString();
-        String sn2 = new StringBuilder(t).reverse().toString();
-
-        return null;
+    public String solve1(String num1, String num2) {
+        String result = "";
+        int curr = 0;
+        int n1 = num1.length() - 1;
+        int n2 = num2.length() - 1;
+        int x = 0, y = 0;
+        while (n1 >= 0 || n2 >= 0) {
+            if (n1 < 0) {
+                x = 0;
+            } else {
+                x = num1.charAt(n1) - '0';
+            }
+            if (n2 < 0) {
+                y = 0;
+            } else {
+                y = num2.charAt(n2) - '0';
+            }
+            result += String.valueOf((x + y + curr) % 10);
+            curr = (x + y + curr) / 10;
+            n1--;
+            n2--;
+        }
+        if (curr == 1) {
+            result += "1";
+        }
+        return new StringBuffer(result).reverse().toString();
     }
 
 }
