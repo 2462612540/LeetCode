@@ -7,10 +7,36 @@
  */
 package 牛客面试必会100题;
 
+import org.junit.Test;
+
 public class 容器盛水II {
 
-    public long maxWater(int[] arr) {
-        return 0;
+    @Test
+    public void test() {
+        long l = maxWater(new int[]{3, 1, 2, 5, 2, 4});
+        System.out.println(l);
     }
 
+    public long maxWater(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        long ans = 0;
+        int l = 0;
+        int r = arr.length - 1;
+
+        int lmax = arr[0];
+        int rmax = arr[arr.length - 1];
+
+        while (l <= r) {
+            lmax = Math.max(arr[l], lmax);
+            rmax = Math.max(arr[r], rmax);
+            if (lmax < rmax) {
+                ans += lmax - arr[l];
+                l++;
+            } else {
+                ans += rmax - arr[r];
+                r--;
+            }
+        }
+        return (long) ans;
+    }
 }

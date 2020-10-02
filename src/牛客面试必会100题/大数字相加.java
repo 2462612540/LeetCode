@@ -55,4 +55,33 @@ public class 大数字相加 {
         return new StringBuffer(result).reverse().toString();
     }
 
+    public String solve2(String num1, String num2) {
+        int index1 = num1.length() - 1;
+        int index2 = num2.length() - 1;
+        int carry = 0;
+        StringBuilder stringBuilder = new StringBuilder();
+        while (index1 >= 0 && index2 >= 0) {
+            int sum = (num1.charAt(index1) - '0') + (num2.charAt(index2) - '0') + carry;
+            carry = sum / 10;
+            stringBuilder.append(sum % 10);
+            index1--;
+            index2--;
+        }
+        while (index1 >= 0) {
+            int sum = (num1.charAt(index1) - '0') + carry;
+            carry = sum / 10;
+            stringBuilder.append(sum % 10);
+            index1--;
+        }
+        while (index2 >= 0) {
+            int sum = (num2.charAt(index2) - '0') + carry;
+            carry = sum / 10;
+            stringBuilder.append(sum % 10);
+            index2--;
+        }
+        if (carry == 1) {
+            stringBuilder.append(1);
+        }
+        return stringBuilder.reverse().toString();
+    }
 }
