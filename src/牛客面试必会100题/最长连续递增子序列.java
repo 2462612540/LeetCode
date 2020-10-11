@@ -9,10 +9,7 @@ package 牛客面试必会100题;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class 最长递增子序列_连续 {
+public class 最长连续递增子序列 {
 
     @Test
     public void test() {
@@ -64,41 +61,5 @@ public class 最长递增子序列_连续 {
             }
         }
         return res;
-    }
-
-    /**
-     * 这个是完全错误的代码
-     *
-     * @param num
-     * @return
-     */
-    public int[] LIS2(int[] num) {
-        int[] dp = new int[num.length];
-        int[] index = new int[num.length];
-        Arrays.fill(dp, 1);
-
-        for (int i = 1; i < num.length; i++) {
-            for (int j = i; j >= 0; j--) {
-                if (num[i] > num[j]) {
-                    dp[i] = dp[j] + 1;
-                    index[i] = num[j];
-                    break;
-                }
-            }
-        }
-        ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 1; i < index.length; i++) {
-            if (index[i] > 0 && index[i] < index[i - 1]) {
-                list.add(index[i]);
-                System.out.print(index[i] + " ");
-            }
-        }
-        Arrays.sort(num);
-        list.add(num[num.length - 1]);
-        int[] ans = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            ans[i] = list.get(i);
-        }
-        return ans;
     }
 }

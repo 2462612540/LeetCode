@@ -45,7 +45,7 @@ public class 丢失棋子问题 {
         for (int i = 1; i <= N; ++i) {
             min = Math.min(min, Math.max(helper1(i - 1, K - 1), helper1(N - i, K)));
         }
-        return min + 1;
+        return min+1;
     }
 
     /**
@@ -58,7 +58,8 @@ public class 丢失棋子问题 {
     public int solutionTwo(int N, int K) {
         if (N < 1 || K < 1)
             return 0;
-        if (K == 1) return N;
+        if (K == 1)
+            return N;
         int[][] dp = new int[N + 1][K + 1];
         for (int i = 1; i < dp.length; ++i) {
             dp[i][1] = i;
@@ -69,7 +70,7 @@ public class 丢失棋子问题 {
                 for (int k = 1; k < i + 1; ++k) {
                     min = Math.min(min, Math.max(dp[k - 1][j - 1], dp[i - k][j]));
                 }
-                dp[i][j] = min + 1;
+                dp[i][j] = min+1 ;
             }
         }
         return dp[N][K];
