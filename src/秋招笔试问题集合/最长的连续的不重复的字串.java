@@ -12,7 +12,7 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Main {
+public class 最长的连续的不重复的字串 {
 
     @Test
     public void test1(){

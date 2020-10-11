@@ -9,7 +9,7 @@ package 秋招笔试问题集合;
 
 import java.util.Scanner;
 
-public class 递归母牛的问 {
+public class 递归母牛问题 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
