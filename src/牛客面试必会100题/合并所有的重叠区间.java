@@ -30,18 +30,18 @@ public class 合并所有的重叠区间 {
     }
 
     public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
-        //设置结果
-        ArrayList<Interval> ans = new ArrayList<>();
+        if (intervals == null || intervals.size() < 2){
+            return intervals;
+        }
         Collections.sort(intervals, new Comparator<Interval>() {
             @Override
             public int compare(Interval o1, Interval o2) {
                 return o1.start != o2.start ? o1.start - o2.start : o2.end - o1.end;
             }
         });
-
         ArrayList<Interval> res = new ArrayList<>();
+        //第一个放入
         res.add(intervals.get(0));
-
         for (int i = 1; i < intervals.size(); i++) {
             if (res.get(res.size() - 1).start == intervals.get(i).start){
                 continue;
@@ -58,6 +58,7 @@ public class 合并所有的重叠区间 {
     @Test
     public void test() {
         Interval a = new Interval(10, 30);
+        Interval e = new Interval(10, 70);
         Interval b = new Interval(20, 60);
         Interval c = new Interval(80, 100);
         Interval d = new Interval(150, 180);
@@ -66,9 +67,12 @@ public class 合并所有的重叠区间 {
         list.add(b);
         list.add(c);
         list.add(d);
+        list.add(e);
         ArrayList<Interval> res = merge(list);
+
         for (Interval re : res) {
-            System.out.println(re.start + "--" + re.end);
+            System.out.println(re.start + " " + re.end);
         }
     }
+
 }
