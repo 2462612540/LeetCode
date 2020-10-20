@@ -13,10 +13,10 @@ package 单例设计模式;
 public class Singleton {
 
     private Singleton singleton = new Singleton();
-
+    //构造函数
     private Singleton() {
     }
-
+    //获取对象的函数
     private Singleton getSingleton() {
         return singleton;
     }

@@ -9,7 +9,7 @@ package 秋招笔试问题集合;
 
 import java.util.*;
 
-public class Main {
+public class N皇后问题 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] s = sc.nextLine().split(" ");

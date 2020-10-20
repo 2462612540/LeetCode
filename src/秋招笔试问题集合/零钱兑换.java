@@ -67,10 +67,8 @@ public class 零钱兑换 {
     @Test
     public void test() {
         int[] conis = {1, 2, 5};
-        int amount = 11;
+        int amount = 500;
         int ans = coinChange(conis, amount);
         System.out.println(ans);
     }
-
-
 }
