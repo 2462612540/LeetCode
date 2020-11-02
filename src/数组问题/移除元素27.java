@@ -116,9 +116,26 @@ public class 移除元素27 {
         return nums.length;
     }
 
+    /**
+     * 这个也是采用的是双指针的方法来实现移动元素的
+     *
+     * @param nums
+     * @param val
+     * @return
+     */
+    public int removeElement5(int[] nums, int val) {
+        int index = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != val) {
+                nums[index++] = nums[j];
+            }
+        }
+        return index;
+    }
+
     @Test
     public void test() {
-        int res = removeElement4(new int[]{2}, 3);
+        int res = removeElement5(new int[]{0, 1, 2, 2, 3, 0, 4, 2}, 2);
         System.out.println(res);
     }
 }
