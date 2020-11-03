@@ -37,6 +37,12 @@ public class 加一66 {
         return result;
     }
 
+    /**
+     * 只要考虑的是最后的一位是否大于10 如果小于 那么就需要的是返回的是  如果是的大于则需要比较下一位
+     *
+     * @param digits
+     * @return
+     */
     public int[] plusOne3(int[] digits) {
         for (int i = digits.length - 1; i >= 0; i--) {
             digits[i]++;
@@ -80,7 +86,7 @@ public class 加一66 {
 
     @Test
     public void test() {
-        int[] ints = plusOne3(new int[]{9,9,7});
+        int[] ints = plusOne3(new int[]{9, 7, 9});
         for (int i : ints) {
             System.out.print(i + " ");
         }
