@@ -50,7 +50,6 @@ public class 最大的连续的1的个数 {
     public void test() {
         int res = findMaxConsecutiveOnes(new int[]{1, 1, 0, 1, 1, 1});
         System.out.println(res);
-
     }
 
 }
