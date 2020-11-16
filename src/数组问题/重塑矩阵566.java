@@ -13,6 +13,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class 重塑矩阵566 {
+
+    /**
+     * 利用了数组的计算公式
+     *
+     * @param nums
+     * @param r
+     * @param c
+     * @return
+     */
+    public int[][] matrixReshape2(int[][] nums, int r, int c) {
+        // 无法转化的时候，输出原矩阵。
+        if (r * c != nums.length * nums[0].length)
+            return nums;
+        int[][] result = new int[r][c];
+        int count = 0;
+        for (int[] row : nums)
+            for (int item : row) {
+                result[count / c][count % c] = item;
+                count++;
+            }
+        return result;
+    }
+
     /**
      * 给出一个由二维数组表示的矩阵，以及两个正整数r和c，分别表示想要的重构的矩阵的行数和列数。
      *
