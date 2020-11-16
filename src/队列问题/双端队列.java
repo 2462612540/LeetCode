@@ -11,13 +11,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- *
+ * 双端队列的使用 在很多滑动窗口的方法中的很多时候都是会有用到这这个的一种数据结构
  */
 public class 双端队列 {
-
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
 
         Deque<String> deque = new LinkedList<String>();
@@ -40,19 +36,19 @@ public class 双端队列 {
         deque.offer("h");
         System.out.println("队尾加入元素后为：" + deque);
 
-        //获取并移除队列第一个元素,pollFirst()也是，区别在于队列为空时,removeFirst会抛出NoSuchElementException异常，后者返回null
+        //TODO 获取并移除队列第一个元素,pollFirst()也是，区别在于队列为空时,removeFirst会抛出NoSuchElementException异常，后者返回null
         deque.removeFirst();
         System.out.println("获取并移除队列第一个元素后为:" + deque);
 
-        //获取并移除队列第一个元素,此方法与pollLast 唯一区别在于队列为空时,removeLast会抛出NoSuchElementException异常，后者返回null
+        //TODO 获取并移除队列第一个元素,此方法与pollLast 唯一区别在于队列为空时,removeLast会抛出NoSuchElementException异常，后者返回null
         deque.removeLast();
         System.out.println("获取并移除队列最后一个元素后为:" + deque);
 
-        //获取队列第一个元素.此方法与 peekFirst 唯一的不同在于：如果此双端队列为空，它将抛出NoSuchElementException，后者返回null
+        //TODO 获取队列第一个元素.此方法与 peekFirst 唯一的不同在于：如果此双端队列为空，它将抛出NoSuchElementException，后者返回null
         System.out.println("获取队列第一个元素为:" + deque.getFirst());
         System.out.println("获取队列第一个元素后为:" + deque);
 
-        //获取队列最后一个元素.此方法与 peekLast 唯一的不同在于：如果此双端队列为空，它将抛出NoSuchElementException，后者返回null
+        //TODO 获取队列最后一个元素.此方法与 peekLast 唯一的不同在于：如果此双端队列为空，它将抛出NoSuchElementException，后者返回null
         System.out.println("获取队列最后一个元素为:" + deque.getLast());
         System.out.println("获取队列第一个元素后为:" + deque);
 
