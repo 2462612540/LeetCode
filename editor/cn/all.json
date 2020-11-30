@@ -1,15 +1,15 @@
 [
   {
     "articleLive": 2,
-    "formTitle": "[1370]上升下降字符串",
-    "frontendQuestionId": "1370",
+    "formTitle": "[976]三角形的最大周长",
+    "frontendQuestionId": "976",
     "leaf": true,
     "level": 1,
     "nodeType": "def",
-    "questionId": "1472",
+    "questionId": "1018",
     "status": "",
-    "title": "上升下降字符串",
-    "titleSlug": "increasing-decreasing-string"
+    "title": "三角形的最大周长",
+    "titleSlug": "largest-perimeter-triangle"
   },
   {
     "articleLive": 2,
@@ -11713,18 +11713,6 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[976]三角形的最大周长",
-    "frontendQuestionId": "976",
-    "leaf": true,
-    "level": 1,
-    "nodeType": "def",
-    "questionId": "1018",
-    "status": "",
-    "title": "三角形的最大周长",
-    "titleSlug": "largest-perimeter-triangle"
-  },
-  {
-    "articleLive": 2,
     "formTitle": "[977]有序数组的平方",
     "frontendQuestionId": "977",
     "leaf": true,
@@ -16441,6 +16429,18 @@
   },
   {
     "articleLive": 2,
+    "formTitle": "[1370]上升下降字符串",
+    "frontendQuestionId": "1370",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "1472",
+    "status": "",
+    "title": "上升下降字符串",
+    "titleSlug": "increasing-decreasing-string"
+  },
+  {
+    "articleLive": 2,
     "formTitle": "[1371]每个元音包含偶数次的最长子字符串",
     "frontendQuestionId": "1371",
     "leaf": true,
@@ -19978,6 +19978,126 @@
     "status": "",
     "title": "完成所有任务的最少初始能量",
     "titleSlug": "minimum-initial-energy-to-finish-tasks"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1666]Change the Root of a Binary Tree",
+    "frontendQuestionId": "1666",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1810",
+    "status": "lock",
+    "title": "Change the Root of a Binary Tree",
+    "titleSlug": "flip-binary-tree"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1667]Fix Names in a Table",
+    "frontendQuestionId": "1667",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "1811",
+    "status": "lock",
+    "title": "Fix Names in a Table",
+    "titleSlug": "fix-names-in-a-table"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5557]最大重复子字符串",
+    "frontendQuestionId": "5557",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "1764",
+    "status": "",
+    "title": "最大重复子字符串",
+    "titleSlug": "maximum-repeating-substring"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5558]合并两个链表",
+    "frontendQuestionId": "5558",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1765",
+    "status": "",
+    "title": "合并两个链表",
+    "titleSlug": "merge-in-between-linked-lists"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5559]得到山形数组的最少删除次数",
+    "frontendQuestionId": "5559",
+    "leaf": true,
+    "level": 3,
+    "nodeType": "def",
+    "questionId": "1766",
+    "status": "",
+    "title": "得到山形数组的最少删除次数",
+    "titleSlug": "minimum-number-of-removals-to-make-mountain-array"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5560]设计前中后队列",
+    "frontendQuestionId": "5560",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1767",
+    "status": "",
+    "title": "设计前中后队列",
+    "titleSlug": "design-front-middle-back-queue"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5613]最富有客户的资产总量",
+    "frontendQuestionId": "5613",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "1791",
+    "status": "",
+    "title": "最富有客户的资产总量",
+    "titleSlug": "richest-customer-wealth"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5614]找出最具竞争力的子序列",
+    "frontendQuestionId": "5614",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1792",
+    "status": "",
+    "title": "找出最具竞争力的子序列",
+    "titleSlug": "find-the-most-competitive-subsequence"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5615]使数组互补的最少操作次数",
+    "frontendQuestionId": "5615",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1793",
+    "status": "",
+    "title": "使数组互补的最少操作次数",
+    "titleSlug": "minimum-moves-to-make-array-complementary"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[5616]数组的最小偏移量",
+    "frontendQuestionId": "5616",
+    "leaf": true,
+    "level": 3,
+    "nodeType": "def",
+    "questionId": "1794",
+    "status": "",
+    "title": "数组的最小偏移量",
+    "titleSlug": "minimize-deviation-in-array"
   },
   {
     "articleLive": 2,

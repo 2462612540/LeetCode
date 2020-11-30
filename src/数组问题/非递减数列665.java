@@ -17,6 +17,12 @@ import org.junit.Test;
 public class 非递减数列665 {
     /**
      * 遍历依次就可以实现了
+     * 若至多改变一个元素能将原数组调整有序，当只有一处失序存在时必定有high = low + 1,当数组完全符合非递减时high = low,因此high-low<=1是命题的必要条件。
+     * 另一方面如图所示，当失序的时候有两种调整方案：
+     * 1.改变位置low,使得nums[low-1]≤nums[low]≤nums[low+1];
+     * 2.改变位置high,使得nums[high-1]≤nums[high]≤nums[high+1];
+     * 采用方案1前提条件为nums[low+1]>=nums[low-1],采用方案2前提条件为nums[high+1]>=nums[high-1]。
+     * 再考虑两种端点情况，即在最开始和最结尾失序，low=0或者high=len-1时，一定可以调整。最终代码如下：
      *
      * @param nums
      * @return
