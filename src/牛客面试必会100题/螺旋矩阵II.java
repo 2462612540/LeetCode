@@ -34,11 +34,8 @@ public class 螺旋矩阵II {
         int[][] arry = new int[n][n];
         int[] dx = {0, 1, 0, -1};
         int[] dy = {1, 0, -1, 0};
-
         boolean[][] vis = new boolean[n][n];
-
         int d = 0;
-
         int x = 0;
         int y = 0;
         for (int i = 1; i <= n * n; i++) {

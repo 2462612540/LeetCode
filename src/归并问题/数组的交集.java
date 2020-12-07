@@ -50,7 +50,6 @@ public class 数组的交集 {
      * @param nums2
      * @return
      */
-
     public static int[] intersect1(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
@@ -104,6 +103,7 @@ public class 数组的交集 {
 
     /**
      * 采用的是list的性质
+     * 将数组转变为的list   采用的是使用的Arrays.Stream.(数组).boxed().collect(Collection.toList())
      *
      * @param nums1
      * @param nums2

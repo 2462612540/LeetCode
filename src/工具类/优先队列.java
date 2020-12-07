@@ -53,7 +53,6 @@ public class 优先队列 {
                 }
 
             }
-
         };
         Queue<优先队列> priorityQueue = new PriorityQueue<优先队列>(11, OrderIsdn);
         优先队列 t1 = new 优先队列("t1", 1);
