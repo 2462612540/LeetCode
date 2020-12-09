@@ -44,4 +44,25 @@ public class 二叉树的直径 {
             this.val = val;
         }
     }
+
+    int dmax = 1;
+
+    public int dTree(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int res = deepth1(root);
+        return dmax - 1;
+    }
+
+    private int deepth1(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int L = deepth1(root.left);
+        int R = deepth1(root.right);
+        dmax = Math.max(dmax, L + R + 1);
+        return Math.max(L, R) + 1;
+    }
+
 }

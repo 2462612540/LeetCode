@@ -42,9 +42,9 @@ public class 随机找到数据流中位数 {
     public void test() {
         //{{1, 5}, {2}, {1, 3}, {2}, {1, 6}, {2}, {1, 7}, {2}}  {{2}, {1, 1}, {2}}
         double[] flowmedian = flowmedian1(new int[][]{{1, 5}, {2}, {1, 3}, {2}, {1, 6}, {2}, {1, 7}, {2}});
-        for (double a : flowmedian) {
-            System.out.println(a);
-        }
+//        for (double a : flowmedian) {
+//            System.out.println(a);
+//        }
     }
 
     /**
@@ -90,6 +90,16 @@ public class 随机找到数据流中位数 {
 
             }
         }
+
+        while (!queMax.isEmpty()) {
+            System.out.print(queMax.poll() + " ");
+        }
+        System.out.println();
+        System.out.println("-------------------------------");
+        while (!queMin.isEmpty()) {
+            System.out.print(queMin.poll() + " ");
+        }
+
         double[] res = new double[resD.size()];
         for (int i = 0; i < resD.size(); i++) {
             res[i] = resD.get(i);
