@@ -29,7 +29,6 @@ public class 大更堆小根堆 {
         });
         int sum = 0;
         for (int i = 0; i < nums.length; i++) {
-
             //插入
             int number = nums[i];
             sum++;
