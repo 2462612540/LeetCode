@@ -16,11 +16,9 @@ public class 矩阵的乘法 {
         int[][] ans = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                int t = 0;
                 for (int k = 0; k < p; k++) {
-                    t += a[i][k] * b[k][j];
+                    ans[i][j] += a[i][k] * b[k][j];
                 }
-                ans[i][j] = t;
             }
         }
         return ans;
