@@ -51,6 +51,7 @@ public class 数组中组合的最大的数 {
                 vis[i] = true;
                 //下一个状态
                 dfs(nums, list, result, vis);
+                //回溯 剪枝
                 list.remove(list.size() - 1);
                 vis[i] = false;
             }
