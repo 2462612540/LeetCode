@@ -7,6 +7,15 @@ package 名企高频面试题143;
  * @Created by xjl
  */
 public class 是否包含子树 {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
 
     /**
      * @description TODO 给定彼此独立的两棵二叉树，判断 t1 树是否有与 t2 树拓扑结构完全相同的子树。
@@ -29,13 +38,4 @@ public class 是否包含子树 {
         return isSameTree(s.left, t.left) && isSameTree(s.right, t.right);
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
 }

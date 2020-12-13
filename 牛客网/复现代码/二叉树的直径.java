@@ -51,7 +51,7 @@ public class 二叉树的直径 {
         if (root == null) {
             return 0;
         }
-        int res = deepth1(root);
+        deepth1(root);
         return dmax - 1;
     }
 
