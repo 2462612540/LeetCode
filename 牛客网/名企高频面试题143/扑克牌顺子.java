@@ -3,6 +3,7 @@ package 名企高频面试题143;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.TreeSet;
 
 /**
  * @Classname 扑克牌顺子
@@ -35,6 +36,18 @@ public class 扑克牌顺子 {
             }
         }
         return num >= 0;
+    }
+
+    public boolean IsContinuous(int[] numbers) {
+        if (numbers.length == 0) return false;
+        TreeSet<Integer> set = new TreeSet<Integer>();
+        for (int val : numbers) {
+            if (val > 0) {
+                if (set.contains(val)) return false;
+                set.add(val);
+            }
+        }
+        return set.last() - set.first() < 5;
     }
 
     @Test
