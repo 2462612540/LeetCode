@@ -12,6 +12,18 @@ import java.util.PriorityQueue;
  * @Created by xjl
  */
 public class 出现topK的数字 {
+    PriorityQueue<Mynum> queue = new PriorityQueue<Mynum>(new MyComparator1());
+
+    class MyNode {
+        String val;
+        int num;
+
+        MyNode(String val, int num) {
+            this.num = num;
+            this.val = val;
+        }
+    }
+
     public String[][] topKstrings(String[] strings, int k) {
 
         PriorityQueue<MyNode> queue = new PriorityQueue<>(new MyComparator());
@@ -38,16 +50,6 @@ public class 出现topK的数字 {
         return result;
     }
 
-    class MyNode {
-        String val;
-        int num;
-
-        MyNode(String val, int num) {
-            this.num = num;
-            this.val = val;
-        }
-    }
-
     class MyComparator implements Comparator<MyNode> {
         @Override
         public int compare(MyNode o1, MyNode o2) {
@@ -60,4 +62,28 @@ public class 出现topK的数字 {
             }
         }
     }
+
+    //自定义一个类 然后在使用是
+    public class Mynum {
+        String s;
+        int val;
+
+        public Mynum(String s, int val) {
+            this.s = s;
+            this.val = val;
+        }
+    }
+
+    public class MyComparator1 implements Comparator<Mynum> {
+
+        @Override
+        public int compare(Mynum o1, Mynum o2) {
+            if (o1.val == o2.val) {
+                return o1.s.compareTo(o2.s);
+            } else {
+                return o2.val - o1.val;
+            }
+        }
+    }
+
 }
