@@ -11,7 +11,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 
 public class 数字的全部排列去重复 {
@@ -26,12 +25,11 @@ public class 数字的全部排列去重复 {
         List<Integer> list = new ArrayList<>();
         boolean[] vis = new boolean[nums.length];
         test2(nums, 0, vis, list, lists);
-        lists = new ArrayList<>(new HashSet<>(lists));
         return lists;
     }
 
     private void test2(int[] nums, int index, boolean[] vis, List<Integer> list, List<List<Integer>> lists) {
-        if (index == nums.length) {
+        if (index == nums.length && !lists.contains(list)) {
             lists.add(new ArrayList<>(list));
             return;
         } else {
@@ -42,8 +40,6 @@ public class 数字的全部排列去重复 {
                     test2(nums, index + 1, vis, list, lists);
                     list.remove(list.size() - 1);
                     vis[i] = false;
-                } else {
-                    continue;
                 }
             }
         }
