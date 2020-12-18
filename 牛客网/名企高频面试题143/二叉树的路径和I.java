@@ -7,6 +7,13 @@ package 名企高频面试题143;
  * @Created by xjl
  */
 public class 二叉树的路径和I {
+
+    public class TreeNode {
+        int val = 0;
+        TreeNode left = null;
+        TreeNode right = null;
+    }
+
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) {
             return false;
@@ -17,9 +24,4 @@ public class 二叉树的路径和I {
         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 
-    public class TreeNode {
-        int val = 0;
-        TreeNode left = null;
-        TreeNode right = null;
-    }
 }
