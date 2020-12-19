@@ -32,5 +32,4 @@ public class 二叉树的路径和 {
         TreeNode left = null;
         TreeNode right = null;
     }
-
 }
