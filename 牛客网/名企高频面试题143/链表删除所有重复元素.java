@@ -17,8 +17,9 @@ public class 链表删除所有重复元素 {
      * @author: xjl
      */
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null)
+        if (head == null) {
             return null;
+        }
         ListNode dumy = new ListNode(0);
         dumy.next = head;
 
