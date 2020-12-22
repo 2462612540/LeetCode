@@ -49,4 +49,20 @@ public class 二分查找的代码 {
         int index = search(new int[]{1, 2, 3, 4, 5, 6, 7}, 5);
         System.out.println(index);
     }
+
+    public static void main(String[] args) {
+        test2();
+    }
+
+    public static int test2() {
+        try {
+            return 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 1;
+        } finally {
+            return 2;
+        }
+    }
+
 }
