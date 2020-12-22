@@ -54,4 +54,12 @@ public class 环形链表的约瑟夫问题 {
         }
         return last;
     }
+
+    public int ysf2(int n, int m) {
+        if (n == 1) {
+            return 0;
+        }
+        int x = ysf2(n - 1, m);
+        return (m + x) % n;
+    }
 }
