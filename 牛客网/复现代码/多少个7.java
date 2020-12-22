@@ -10,15 +10,25 @@ public class 多少个7 {
     public static void main(String[] args) {
         int count = 0;
         String result = "";
-        for (int i = 1; i <= 1000; i++) {
+        long stime = System.currentTimeMillis(); // 记录起始时间
+        for (int i = 1; i <= 100000; i++) {
             result += String.valueOf(i);
         }
-        for (int i = 0; i < result.length(); i++) {
-            if (result.charAt(i) == '7') {
+        int start = 0;
+        int end = result.length() - 1;
+
+        while (start < end) {
+            if (result.charAt(start) == '7') {
                 count++;
             }
+            if (result.charAt(end) == '7') {
+                count++;
+            }
+            start++;
+            end--;
         }
-        System.out.println(result);
+        long etime = System.currentTimeMillis();       // 记录结束时间
         System.out.println(count);
+        System.out.println((etime - stime) / 1000);
     }
 }
