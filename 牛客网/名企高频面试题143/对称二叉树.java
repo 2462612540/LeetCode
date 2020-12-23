@@ -7,15 +7,18 @@ package 名企高频面试题143;
  * @Created by xjl
  */
 public class 对称二叉树 {
+    private boolean recur(TreeNode L, TreeNode R) {
+        if (L == null && R == null) {
+            return true;
+        }
+        if (L == null || R == null || L.val != R.val) {
+            return false;
+        }
+        return recur(L.left, R.right) && recur(L.right, R.left);
+    }
 
     public boolean isSymmetric(TreeNode root) {
         return root == null ? true : recur(root.left, root.right);
-    }
-
-    private boolean recur(TreeNode L, TreeNode R) {
-        if (L == null && R == null) return true;
-        if (L == null || R == null || L.val != R.val) return false;
-        return recur(L.left, R.right) && recur(L.right, R.left);
     }
 
     public class TreeNode {
@@ -23,4 +26,5 @@ public class 对称二叉树 {
         TreeNode left = null;
         TreeNode right = null;
     }
+
 }
