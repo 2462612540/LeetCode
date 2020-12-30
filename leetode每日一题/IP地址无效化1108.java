@@ -26,10 +26,6 @@ public class IP地址无效化1108 {
         return result;
     }
 
-
-
-
-
     public static void main(String[] args) {
         String s = defangIPaddr("255.100.50.0");
         System.out.println(s);
