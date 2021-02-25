@@ -14,8 +14,8 @@ import java.util.Scanner;
 
 public class Main11 {
     public static void main(String[] args) {
-        //int test = test();
-        // System.out.println(test);
+        //int testcode.test.test = testcode.test.test();
+        // System.out.println(testcode.test.test);
 
         //---------------------
         test2();
