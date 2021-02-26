@@ -13,5 +13,7 @@ public class 排序 {
     public int[] MySort (int[] arr) {
         Arrays.sort(arr);
         return arr;
+
+
     }
 }
