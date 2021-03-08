@@ -16,7 +16,7 @@ public class 合并链表 {
      * @return: 复现代码.合并链表.ListNode
      * @author: xjl
      */
-    public ListNode merge(ListNode head1, ListNode head2) {
+    public ListNode merge2(ListNode head1, ListNode head2) {
         if (head1 == null && head2 != null) {
             return head2;
         }
@@ -54,6 +54,37 @@ public class 合并链表 {
             curr2 = curr.next;
         }
         return dumpy.next;
+    }
+
+    /**
+     * @description TODO 采用的是归并的思想来实现的对链表的合并
+      * @param: l1
+     * @param: l2
+     * @date: 2021/3/8 12:49
+     * @return: 牛客网名企高频面试题复现代码2020.合并链表.ListNode
+     * @author: xjl
+    */
+    public ListNode merge(ListNode l1, ListNode l2) {
+        // 创建一个新的链表
+        ListNode pre = new ListNode(0);
+        ListNode cur = pre;
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                cur.next = l1;
+                l1 = l1.next;
+            } else {
+                cur.next = l2;
+                l2 = l2.next;
+            }
+            cur = cur.next;
+        }
+        // 任一为空，直接连接另一条链表
+        if (l1 == null) {
+            cur.next = l2;
+        } else {
+            cur.next = l1;
+        }
+        return pre.next;
     }
 
     public class ListNode {
