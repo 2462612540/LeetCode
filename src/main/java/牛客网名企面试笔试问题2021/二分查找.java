@@ -16,12 +16,26 @@ public class 二分查找 {
         int search = search1(new int[]{1, 2, 2, 3, 4}, 2);
         System.out.println(search);
     }
-
+    /**
+     * @description TODO  没有重复的查找
+      * @param: nums
+     * @param: target
+     * @date: 2021/3/8 9:52
+     * @return: int
+     * @author: xjl
+    */
     public int search(int[] nums, int target) {
         int i = Arrays.binarySearch(nums, target);
         return i;
     }
-
+    /**
+     * @description TODO 有重复的查找
+     * @param: nums
+     * @param: target
+     * @date: 2021/3/8 9:53
+     * @return: int
+     * @author: xjl
+    */
     public int search1(int[] nums, int target) {
         int i = Arrays.binarySearch(nums, target);
         while (i > 0) {
