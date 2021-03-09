@@ -71,6 +71,7 @@ public class 单调栈 {
             }
         }
         //出栈的问题
+
         while (!stack.isEmpty()) {
             ArrayList<Integer> pop = stack.pop();
             int l = stack.isEmpty() ? -1 : stack.peek().get(0);
