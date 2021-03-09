@@ -33,11 +33,13 @@ public class 括号的生成 {
         if (left<n){
             str.append("(");
             dfs(res,str,left+1,right,n);
+            //这是进行回溯的算法
             str.deleteCharAt(str.length()-1);
         }
         if (right<left){
             str.append(")");
             dfs(res,str,left,right+1,n);
+            //这是进行回溯的算法
             str.deleteCharAt(str.length()-1);
         }
     }
