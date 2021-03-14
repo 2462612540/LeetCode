@@ -65,7 +65,7 @@ public class test {
                         i++;
                         continue;
                     } else {
-                        //判断下一个是好词
+                        //判断下一个不是好词
                         frist = "";
                         oldstr += arr[i] + " " + arr[i + 1] + " ";
                         continue;
@@ -106,5 +106,4 @@ public class test {
         }
         return count == 1;
     }
-
 }
