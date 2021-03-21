@@ -15,26 +15,33 @@ public class 出现1的个数 {
         System.out.println(res);
 
         int i = hammingWeight(10);
-        System.out.println("i="+i);
+        System.out.println("i=" + i);
     }
 
     public int one(int n) {
         int count = 0;
         while (n != 0) {
-            count+=n & 1;
+            count += n & 1;
             n >>>= 1;
         }
         return count;
     }
-
 
     public int hammingWeight(int n) {
         int res = 0;
         while (n != 0) {
             res += n & 1;
             n >>>= 1;
-        }
+        }F
         return res;
     }
+
+    public int onetest(int n) {
+        int count = 0;
+        while (n != 0) {
+            count += n & 1;
+            n >>>= 1;
+        }
+        return count;    }
 
 }

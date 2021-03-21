@@ -8,7 +8,7 @@ package 牛客网名企面试笔试代码复现2021;
  */
 public class 数字的划分 {
     /**
-     * @description TODO  数字的划分和分糖果是一样的 有n 个糖果 分给k小小朋友 问有多少中分发
+     * @description TODO  数字的划分和分糖果是一样的 有n 个糖果 分给k小小朋友 问有多少中分发多少个糖果
      * @param: n
      * @param: k
      * @date: 2021/3/8 10:43
