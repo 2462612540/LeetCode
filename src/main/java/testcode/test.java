@@ -1,5 +1,7 @@
 package testcode;
 
+import org.junit.Test;
+
 import java.util.Scanner;
 
 /**
@@ -71,7 +73,12 @@ public class test {
         }
     }
 
-
+    @Test
+    public void test(){
+        Integer a=new Integer(1);
+        Integer b=new Integer(1);
+        System.out.println(a==b);
+    }
 
 
 
