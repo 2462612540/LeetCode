@@ -6,5 +6,6 @@ package 牛客网名企面试笔试问题2021;
  * @Date 2021/3/9 10:20
  * @Created by xjl
  */
-public class 最长回文子序列 {
+public class 最长不连续回文子序列 {
+
 }
