@@ -1,7 +1,5 @@
 package 牛客网名企面试笔试代码复现2021;
 
-import 牛客网名企面试笔试问题2021.二叉树的景象文件;
-
 /**
  * @Classname 二叉树的景象
  * @Description TODO

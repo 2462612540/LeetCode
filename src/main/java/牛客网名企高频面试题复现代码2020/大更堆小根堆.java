@@ -27,6 +27,7 @@ public class 大更堆小根堆 {
                 return o2 - o1;
             }
         });
+
         int sum = 0;
         for (int i = 0; i < nums.length; i++) {
             //插入

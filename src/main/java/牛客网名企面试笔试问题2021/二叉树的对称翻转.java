@@ -6,7 +6,7 @@ package 牛客网名企面试笔试问题2021;
  * @Date 2021/3/8 9:54
  * @Created by xjl
  */
-public class 二叉树的景象文件 {
+public class 二叉树的对称翻转 {
     public class TreeNode {
         int val = 0;
         TreeNode left = null;

@@ -1,4 +1,4 @@
-package 牛客网名企高频面试题复现代码2020;
+package 计算机程序算法分类.二叉树问题;
 
 /**
  * @Classname 二叉树的直径
@@ -23,19 +23,6 @@ public class 二叉树的直径 {
         }
         deepth(root);
         return dis - 1;
-    }
-
-    int dic = 0;
-
-    public int deepdic(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        int L = deepdic(root.left);
-        int R = deepdic(root.right);
-        //计算直径的的核心代码
-        dic = Math.max(dic, L + R + 1);
-        return Math.max(L, R) + 1;
     }
 
     private int deepth(TreeNode root) {

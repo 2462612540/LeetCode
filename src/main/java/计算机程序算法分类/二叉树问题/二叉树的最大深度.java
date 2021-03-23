@@ -1,22 +1,20 @@
-package 牛客网名企高频面试题复现代码2020;
+package 计算机程序算法分类.二叉树问题;
 
 /**
- * @Classname 二叉树的镜像
+ * @Classname 二叉树的最大深度
  * @Description TODO
- * @Date 2020/12/23 13:35
+ * @Date 2020/12/23 13:30
  * @Created by xjl
  */
-public class 二叉树的镜像 {
+public class 二叉树的最大深度 {
 
-    public void test(TreeNode root) {
+    public int test(TreeNode root) {
         if (root == null) {
-            return;
+            return 0;
         }
-        TreeNode tmp = root.left;
-        root.left = root.right;
-        root.right = tmp;
-        test(root.left);
-        test(root.right);
+        int left = test(root.left);
+        int right = test(root.right);
+        return Math.max(left, right) + 1;
     }
 
     /**
@@ -35,4 +33,5 @@ public class 二叉树的镜像 {
             this.val = val;
         }
     }
+
 }

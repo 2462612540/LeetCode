@@ -36,7 +36,7 @@ public class 出现topK的数字 {
                 map.put(strings[i], 1);
             }
         }
-        //入堆
+        //入队
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             queue.add(new MyNode(entry.getKey(), entry.getValue()));
         }

@@ -36,13 +36,12 @@ public class K个链表的合并 {
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
                 cur.next = l1;
-                cur = cur.next;
                 l1 = l1.next;
             } else {
                 cur.next = l2;
-                cur = cur.next;
                 l2 = l2.next;
             }
+            cur = cur.next;
         }
         // 任一为空，直接连接另一条链表
         if (l1 == null) {

@@ -5,7 +5,7 @@
  * Date:     2020/6/27 11:03
  * Description: 优势洗牌
  */
-package 计算机程序算法分类.排序算法;
+package leetode每日一题;
 
 import java.util.*;
 

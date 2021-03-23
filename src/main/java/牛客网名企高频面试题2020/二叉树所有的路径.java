@@ -47,7 +47,15 @@ public class 二叉树所有的路径 {
         searchPaths(root, "", result);
         return result;
     }
-
+    /**
+     * @description TODO 相当于是的dfs的这样的效果
+     * @param: root
+     * @param: curPath
+     * @param: result
+     * @date: 2021/3/23 12:23
+     * @return: void
+     * @author: xjl
+    */
     private void searchPaths(TreeNode root, String curPath, List<String> result) {
         // 递归结束 标志
         if (root == null) {

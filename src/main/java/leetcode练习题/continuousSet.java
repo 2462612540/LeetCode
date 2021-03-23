@@ -5,7 +5,7 @@
  * Date:     2020/7/5 16:44
  * Description: 排序算法
  */
-package 计算机程序算法分类.排序算法;
+package leetcode练习题;
 
 import org.junit.Test;
 

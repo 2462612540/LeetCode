@@ -54,4 +54,24 @@ public class 全排列问题 {
             }
         }
     }
+
+    private void dfs1(int[] nums, ArrayList<Integer> list, ArrayList<ArrayList> result, boolean[] vis) {
+        //终止条件
+        if (list.size() == nums.length) {
+            result.add(new ArrayList(list));
+            return;
+        }
+        for (int i=0;i<nums.length;i++){
+            if (!vis[i]){
+                //添加到这个list
+                list.add(nums[i]);
+                vis[i]=true;
+                //下一次的转态
+                dfs1(nums,list,result,vis);
+                //回溯
+                list.remove(list.size()-1);
+                vis[i]=false;
+            }
+        }
+    }
 }

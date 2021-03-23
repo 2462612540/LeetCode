@@ -1,4 +1,4 @@
-package 牛客网名企高频面试题复现代码2020;
+package 计算机程序算法分类.二叉树问题;
 
 import java.util.*;
 
@@ -66,34 +66,6 @@ public class 二叉树的层序遍历 {
                 }
             }
             //将临时list加入最终返回结果中
-            res.add(tmp);
-        }
-        return res;
-    }
-
-    public ArrayList<ArrayList<Integer>> test11(TreeNode root) {
-        if (root == null) {
-            return new ArrayList<>();
-        }
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        LinkedList<TreeNode> queue = new LinkedList<>();
-
-        queue.add(root);
-
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            ArrayList<Integer> tmp = new ArrayList<>();
-            for (int i = 0; i < size; i++) {
-                TreeNode node = queue.poll();
-                tmp.add(node.val);
-                if (node.left != null) {
-                    queue.add(node.left);
-                }
-                if (node.right != null) {
-                    queue.add(node.right);
-                }
-            }
-            //遍历一次就是遍历一行的数据
             res.add(tmp);
         }
         return res;

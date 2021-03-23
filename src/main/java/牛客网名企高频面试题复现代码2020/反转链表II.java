@@ -2,6 +2,8 @@ package 牛客网名企高频面试题复现代码2020;
 
 import org.junit.Test;
 
+import java.util.LinkedList;
+
 /**
  * @Classname 反转链表II
  * @Description TODO
@@ -41,6 +43,25 @@ public class 反转链表II {
             pre.next = future;
         }
         return dumy.next;
+    }
+
+    public ListNode reverlist(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode dumpy = new ListNode(0);
+        dumpy.next = head;
+
+        ListNode pre = dumpy;
+        ListNode curr = head;
+
+        while (curr.next != null) {
+            ListNode future = curr.next;
+            curr.next = future.next;
+            future.next = dumpy.next;
+            pre.next = future;
+        }
+        return dumpy.next;
     }
 
     public ListNode re(ListNode head) {

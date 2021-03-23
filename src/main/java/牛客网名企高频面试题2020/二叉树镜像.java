@@ -12,9 +12,11 @@ public class 二叉树镜像 {
         if (root == null) {
             return;
         }
+        //二叉树进行的是的左右子树的交换
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
+        //开始递归的是使用的函数
         Mirror(root.left);
         Mirror(root.right);
     }
