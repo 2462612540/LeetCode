@@ -41,4 +41,22 @@ public class 冒泡排序 {
         }
         return number;
     }
+
+    public static int[] BubboSort3(int[] number) {
+        for (int i = number.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                int[] res = swap(number[i], number[j]);
+                number[j] = res[0];
+                number[i] = res[1];
+            }
+        }
+        return number;
+    }
+
+    public static int[] swap(int a, int b) {
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        return new int[]{a, b};
+    }
 }
