@@ -28,7 +28,7 @@ public class test {
             for (int x = 0; x < s2[j].length(); x++) {
                 sum += s2[j].charAt(x);
             }
-            result+=sum;
+            result += sum;
             j++;
         }
         while (i < s1.length) {
@@ -36,14 +36,14 @@ public class test {
             for (int x = 0; x < s1[i].length(); x++) {
                 sum += s1[i].charAt(x);
             }
-            result+=sum;
+            result += sum;
             i++;
         }
         return result;
     }
 
     public static int min(String s1, String s2) {
-        int[][] dp = new int[s1.length()+1][s2.length()+1];
+        int[][] dp = new int[s1.length() + 1][s2.length() + 1];
         for (int i = s1.length() - 1; i >= 0; i--) {
             dp[i][s2.length()] = dp[i + 1][s2.length()] + s1.codePointAt(i);
         }
@@ -55,7 +55,7 @@ public class test {
                 if (s1.charAt(i) == s2.charAt(j)) {
                     dp[i][j] = dp[i + 1][j + 1];
                 } else {
-                    dp[i][j] = Math.min(dp[i+1][j] + s1.codePointAt(i), dp[i][j + 1] + s2.codePointAt(j));
+                    dp[i][j] = Math.min(dp[i + 1][j] + s1.codePointAt(i), dp[i][j + 1] + s2.codePointAt(j));
                 }
             }
         }
@@ -74,12 +74,12 @@ public class test {
     }
 
     @Test
-    public void test(){
-        Integer a=new Integer(1);
-        Integer b=new Integer(1);
-        System.out.println(a==b);
+    public void test() {
+        Integer a = new Integer(1);
+        Integer b = new Integer(1);
+        System.out.println(a == b);
+
+        StringBuffer stringBuffer = new StringBuffer();
     }
-
-
 
 }
