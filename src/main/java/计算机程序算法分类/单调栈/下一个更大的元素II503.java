@@ -36,5 +36,4 @@ public class 下一个更大的元素II503 {
             System.out.print(i + " ");
         }
     }
-
 }
