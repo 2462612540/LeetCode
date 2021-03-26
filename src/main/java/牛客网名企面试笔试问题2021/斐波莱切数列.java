@@ -33,8 +33,9 @@ public class 斐波莱切数列 {
         //递归的出口
         if (n < 2) {
             return n;
-        }F
-        //递归的条件        return Fibonacci2(n - 2) + Fibonacci2(n - 1);
+        }
+        //递归的条件
+        return Fibonacci2(n - 2) + Fibonacci2(n - 1);
     }
 
     @Test
