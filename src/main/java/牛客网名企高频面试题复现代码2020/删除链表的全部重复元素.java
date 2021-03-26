@@ -16,4 +16,7 @@ public class 删除链表的全部重复元素 {
             this.val = val;
         }
     }
+
+
+
 }
