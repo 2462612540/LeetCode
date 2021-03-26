@@ -1,5 +1,7 @@
 package 牛客网名企面试笔试问题2021;
 
+import org.junit.Test;
+
 /**
  * @Classname 跳跃步数
  * @Description TODO
@@ -31,5 +33,11 @@ public class 跳跃步数 {
             }
         }
         return stepNum;
+    }
+
+    @Test
+    public void test() {
+        int jump = Jump(3, new int[]{2, 3, 1});
+        System.out.println(jump);
     }
 }
