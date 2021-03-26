@@ -79,7 +79,5 @@ public class 删除全部重复的节点元素 {
             System.out.print(listNode.val + " ");
             listNode = listNode.next;
         }
-
     }
-
 }
