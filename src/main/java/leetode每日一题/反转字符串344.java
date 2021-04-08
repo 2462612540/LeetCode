@@ -17,7 +17,7 @@ public class 反转字符串344 {
      * @date: 2021/4/8 13:56
      * @return: void
      * @author: xjl
-    */
+     */
     public void reverseString(char[] s) {
         int left = 0;
         int right = s.length - 1;
@@ -29,13 +29,29 @@ public class 反转字符串344 {
             right--;
         }
         for (char a : s) {
-            System.out.print(a+" ");
+            System.out.print(a + " ");
+        }
+    }
+    /**
+     * @description TODO 这个复杂度为O(2N 且空间复杂为o(1))
+     * @param: s
+     * @date: 2021/4/8 14:06
+     * @return: void
+     * @author: xjl
+    */
+    public void reverseString2(char[] s) {
+        StringBuilder sb = new StringBuilder();
+        for (char a : s) {
+            sb.append(a);
+        }
+        sb.reverse();
+        for (int i=0;i<s.length;i++){
+            s[i]=sb.charAt(i);
         }
     }
 
-
     @Test
-    public void test(){
-        reverseString(new char[]{'h','e','l','l','o'});
+    public void test() {
+        reverseString(new char[]{'h', 'e', 'l', 'l', 'o'});
     }
 }
