@@ -55,6 +55,4 @@ public class Nim游戏292 {
         }
         return canwin[n];
     }
-
-
 }
