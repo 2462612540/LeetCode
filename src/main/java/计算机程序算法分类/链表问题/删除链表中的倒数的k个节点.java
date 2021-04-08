@@ -37,7 +37,7 @@ public class 删除链表中的倒数的k个节点 {
         return node;
     }
     /**
-     * @description TODO  采用的是双指针的模式的来判断的是否是有这个的间隔为的k
+     * @description TODO  采用的是双指针的模式的来判断的是否是有这个的间隔为的k  间隔指针的来判断
      * @param: head
      * @param: k
      * @date: 2021/4/8 15:08
