@@ -36,4 +36,22 @@ public class 删除链表中的倒数的k个节点 {
         }
         return node;
     }
+    /**
+     * @description TODO  采用的是双指针的模式的来判断的是否是有这个的间隔为的k
+     * @param: head
+     * @param: k
+     * @date: 2021/4/8 15:08
+     * @return: 计算机程序算法分类.链表问题.删除链表中的倒数的k个节点.ListNode
+     * @author: xjl
+    */
+    public ListNode getKthFromEnd2(ListNode head, int k) {
+        ListNode former = head, latter = head;
+        for(int i = 0; i < k; i++)
+            former = former.next;
+        while(former != null) {
+            former = former.next;
+            latter = latter.next;
+        }
+        return latter;
+    }
 }
