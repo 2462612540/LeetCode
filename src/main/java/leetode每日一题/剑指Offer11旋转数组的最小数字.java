@@ -8,6 +8,31 @@ package leetode每日一题;
  */
 public class 剑指Offer11旋转数组的最小数字 {
     /**
+     * @description TODO 有重复数字的旋转数组来实现的原理 最好的是logn 最坏的情况是是的O（N）
+     * @param: numbers
+     * @date: 2021/4/10 14:23
+     * @return: int
+     * @author: xjl
+     */
+    public int minArray3(int[] numbers) {
+        int left = 0;
+        int right = numbers.length - 1;
+        if (right == 0) {
+            return numbers[0];
+        }
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (numbers[mid] > numbers[right]) {
+                left = mid + 1;
+            } else if (numbers[mid] < numbers[right]) {
+                right = mid;
+            } else if (numbers[mid] == numbers[right]) {
+                right--;
+            }
+        }
+        return numbers[left];
+    }
+    /**
      * @description TODO 使用的是O(n)
      * @param: numbers
      * @date: 2021/4/10 13:34
@@ -45,29 +70,5 @@ public class 剑指Offer11旋转数组的最小数字 {
         return numbers[low];
     }
 
-    /**
-     * @description TODO 有重复数字的旋转数组来实现的原理 最好的是logn 最坏的情况是是的O（N）
-     * @param: numbers
-     * @date: 2021/4/10 14:23
-     * @return: int
-     * @author: xjl
-     */
-    public int minArray3(int[] numbers) {
-        int left = 0;
-        int right = numbers.length - 1;
-        if (right == 0) {
-            return numbers[0];
-        }
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-            if (numbers[mid] > numbers[right]) {
-                left = mid + 1;
-            } else if (numbers[mid] < numbers[right]) {
-                right = mid;
-            } else if (numbers[mid] == numbers[right]) {
-                right--;
-            }
-        }
-        return numbers[left];
-    }
+
 }
