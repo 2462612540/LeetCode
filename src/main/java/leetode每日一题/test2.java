@@ -2,6 +2,7 @@ package leetode每日一题;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * @Classname test2
@@ -11,8 +12,18 @@ import java.util.List;
  */
 public class test2 {
     public static void main(String[] args) {
-        List<int[]> list = Arrays.asList(new int[]{1, 2, 3, 4, 5});
-        String s = "";
+        PriorityQueue<Integer> pq1 = new PriorityQueue<Integer>((o1, o2) -> o1 - o2);//从小到大顺序
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);//从大到小的顺序
+        pq.add(4);
+        pq.add(2);
+        pq.add(8);
+        pq.add(9);
+        pq.add(10);
+        pq.add(0);
+
+        while (!pq.isEmpty()) {
+            System.out.println(pq.poll());
+        }
 
     }
 }
