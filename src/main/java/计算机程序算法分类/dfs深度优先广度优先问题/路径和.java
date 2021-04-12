@@ -10,7 +10,7 @@ package 计算机程序算法分类.dfs深度优先广度优先问题;
 import java.util.ArrayList;
 import java.util.List;
 
-public class 路径和I {
+public class 路径和 {
 
     private class TreeNode {
         int val;
