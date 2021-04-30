@@ -2,6 +2,10 @@ package testcode;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -82,4 +86,61 @@ public class test {
         StringBuffer stringBuffer = new StringBuffer();
     }
 
+    @Test
+    public void test2() {
+        Double[] arr = {98.0, 99.00, 80.0, 75.0, 60.0};
+        float[] arr1 = new float[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            arr1[i] = Float.valueOf(String.valueOf(arr[i]));
+        }
+        float v = calAverageScore(arr1);
+        System.out.println(v);
+
+    }
+
+    public float calAverageScore(float[] scores) {
+        return 0;
+    }
+
+    @Test
+    public void test3() {
+        // TODO Auto-generated method stub
+        long sum = 1;
+        long func = 1;
+        for (int i = 2; i <= 20; i++) {
+            func = func * i;
+            sum += func;
+        }
+        System.out.println(sum);
+    }
+
+    @Test
+    public void test4() {
+        // TODO Auto-generated method stub
+        long sum = 1;
+        long func = 1;
+        for (int i = 1; ; i++) {
+            if (i % 2 == 1 && i % 3 == 2 && i % 5 == 4 && i % 6 == 5 && i % 7 == 0) {
+                System.out.println(i);
+                return;
+            }
+        }
+    }
+
+    @Test
+    public void test5() {
+        ArrayList<int[]> list = new ArrayList<>();
+        list.add(new int[]{1, 2});
+        list.add(new int[]{3, 4, 5});
+        list.add(new int[]{6, 7});
+        list.add(new int[]{8, 9, 10, 11});
+        int sum = 0;
+        for (int[] arr : list) {
+            for (int a : arr) {
+                sum += a;
+                System.out.print(a + " ");
+            }
+        }
+        System.out.println(sum);
+    }
 }
