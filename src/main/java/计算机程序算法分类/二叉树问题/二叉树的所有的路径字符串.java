@@ -11,7 +11,7 @@ import java.util.List;
  * @Date 2021/4/29 20:46
  * @Created by xjl
  */
-public class 二叉树的所有与的路径 {
+public class 二叉树的所有的路径字符串 {
 
     public class TreeNode {
         int val;
