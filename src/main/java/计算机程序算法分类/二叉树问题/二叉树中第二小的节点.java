@@ -44,7 +44,13 @@ public class 二叉树中第二小的节点 {
         dfs(root.right,set);
     }
 
-
+    /**
+     * @description TODO  这个题目的意思的第一小的一定是的根节点
+     * @param: root
+     * @date: 2021/5/3 12:48
+     * @return: int
+     * @author: xjl
+    */
     public int findSecondMinimumValue(TreeNode root) {
         if (root == null) return -1;
         return help(root, root.val);
@@ -52,6 +58,7 @@ public class 二叉树中第二小的节点 {
 
     private int help(TreeNode root, int min) {
         if (root == null) return -1;
+        //如果你找到的根部节点大于的时候就可以返回了
         if (root.val > min) {
             return root.val;
         }
