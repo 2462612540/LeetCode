@@ -1,12 +1,13 @@
 package 计算机程序算法分类.二叉树问题;
 
 /**
- * @Classname 二叉树的镜像
+ * @Classname 二叉树的深度offer55
  * @Description TODO
- * @Date 2020/12/23 13:35
+ * @Date 2021/5/4 15:32
  * @Created by xjl
  */
-public class 二叉树的镜像 {
+public class 二叉树的深度offer55 {
+
     /**
      * @description TODO  树节点的定义
      * @param: null
@@ -24,15 +25,19 @@ public class 二叉树的镜像 {
         }
     }
 
-    public void test(TreeNode root) {
+    public int maxDepth(TreeNode root) {
         if (root == null) {
-            return;
+            return 0;
         }
-        TreeNode tmp = root.left;
-        root.left = root.right;
-        root.right = tmp;
-        test(root.left);
-        test(root.right);
+        return dfs(root);
     }
 
+    private int dfs(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int l = dfs(root.left);
+        int r = dfs(root.right);
+        return Math.max(l, r) + 1;
+    }
 }

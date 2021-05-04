@@ -6,7 +6,7 @@ package 计算机程序算法分类.二叉树问题;
  * @Date 2021/4/30 13:20
  * @Created by xjl
  */
-public class 是否包含树的子结构offer26 {
+public class offer26是否包含树的子结构 {
 
     public class TreeNode {
         int val;
