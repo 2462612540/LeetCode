@@ -4,19 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Classname 二叉树的路径总和II113
- * @Description TODO 从根部到的叶子节点的的和为目标的值
- * @Date 2021/4/30 13:01
+ * @Classname Offer34二叉树中和为某一值的路径
+ * @Description TODO
+ * @Date 2021/5/4 16:30
  * @Created by xjl
  */
-public class 二叉树的路径总和II113 {
+public class Offer34二叉树中和为某一值的路径 {
+
+    /**
+     * @description TODO  树节点的定义
+     * @param: null
+     * @date: 2020/12/23 10:36
+     * @return:
+     * @author: xjl
+     */
     public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
+        public TreeNode(int val) {
+            this.val = val;
         }
     }
 
@@ -43,4 +51,5 @@ public class 二叉树的路径总和II113 {
         dfs(root.right, lists, list, target, sum);
         list.remove(list.size() - 1);
     }
+
 }

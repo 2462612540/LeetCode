@@ -6,7 +6,7 @@ package 计算机程序算法分类.二叉树问题;
  * @Date 2021/5/4 15:32
  * @Created by xjl
  */
-public class 二叉树的深度offer55 {
+public class offer55二叉树的深度 {
 
     /**
      * @description TODO  树节点的定义
