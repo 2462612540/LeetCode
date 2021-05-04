@@ -49,7 +49,7 @@ public class offer26是否包含树的子结构 {
         } else if (a.val != b.val) {
             return false;
         } else {
-            return dfs(a.left, b.left) && dfs(a.right, b.right);
+            return dfs1(a.left, b.left) && dfs1(a.right, b.right);
         }
     }
 }
