@@ -22,7 +22,9 @@ public class 二叉树的所有的路径 {
 
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> list = new ArrayList<>();
-        if (root == null) return list;
+        if (root == null){
+            return list;
+        }
         dfs(list, root, "");
         return list;
     }

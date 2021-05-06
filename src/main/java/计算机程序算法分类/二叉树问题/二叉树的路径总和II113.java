@@ -22,7 +22,9 @@ public class 二叉树的路径总和II113 {
 
     public List<List<Integer>> pahtsum(TreeNode root, int target) {
         List<List<Integer>> lists = new ArrayList<>();
-        if (root == null) return lists;
+        if (root == null) {
+            return lists;
+        }
         List<Integer> list = new ArrayList<>();
         dfs(root, lists, list, target, 0);
         return lists;
