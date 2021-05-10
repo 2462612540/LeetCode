@@ -7,9 +7,39 @@
  */
 package 计算机程序算法分类.动态规划问题集合;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class 背包问题多重背包 {
 
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int[] array=new int[n];
+        for (int i=0;i<n;i++){
+            array[i]=sc.nextInt();
+        }
+        int res=test12(m,array);
+        if (res==Integer.MAX_VALUE){
+            System.out.println(-1);
+        }else {
+            System.out.println(res);
+        }
+    }
 
+    private static int test12(int m, int[] n) {
+        Arrays.sort(n);
+        int[] dp=new int[m+1];
+        Arrays.fill(dp,Integer.MAX_VALUE);
+        dp[0]=0;
+        for (int i=0;i<n.length;i++){
+            for (int j=n[i];j<=m;j++){
+                dp[j]=Math.min(dp[j],dp[j-n[i]]);
+            }
+        }
+        return dp[m];
+    }
 
     public static int completePack3(int V, int N, int[] weight, int[] value) {
         //动态规划
@@ -22,7 +52,5 @@ public class 背包问题多重背包 {
         }
         return dp[V];
     }
-
-
 
 }
