@@ -21,7 +21,14 @@ public class 二叉树是否对称 {
         }
         return recur(root.left, root.right);
     }
-
+    /**
+     * @description TODO 检查一个树是否对称
+     * @param: L
+     * @param: R
+     * @date: 2021/5/10 20:06
+     * @return: boolean
+     * @author: xjl
+    */
     private boolean recur(TreeNode L, TreeNode R) {
         if (L == null && R == null) {
             return true;
