@@ -39,6 +39,7 @@ public class 丑数II264 {
         return ugly;
     }
 
+
     public int nthUglyNumber2(int n) {
         int[] dp = new int[n + 1];
         dp[1] = 1;
