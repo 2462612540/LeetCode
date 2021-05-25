@@ -1,6 +1,7 @@
 package 计算机程序算法分类.队列问题;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Classname 前K个高频单词692
@@ -9,6 +10,19 @@ import java.util.*;
  * @Created by xjl
  */
 public class 前K个高频单词692 {
+
+    public List<String> topKFrequent3(String[] words, int k) {
+        List<String> ans = Arrays.stream(words)
+                .collect(Collectors.groupingBy(e -> e, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .sorted((o1, o2) -> o2.getValue().equals(o1.getValue()) ? o1.getKey().compareTo(o2.getKey()) : Long.compare(o2.getValue(), o1.getValue()))
+                .limit(k)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());;
+        return ans;
+    }
+
     /**
      * @description TODO  返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出现频率，按字母顺序排序。 可以采用的是hashmap  可以采用的优先队列来实现
      * @param: words 意思就是当Map集合中有这个key时，就使用这个key对应的value值，如果没有就使用默认值defaultValue
@@ -65,8 +79,5 @@ public class 前K个高频单词692 {
         Collections.reverse(ret);
         return ret;
     }
-
-
-
 
 }
