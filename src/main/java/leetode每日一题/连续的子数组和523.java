@@ -61,7 +61,7 @@ public class 连续的子数组和523 {
      */
     public boolean checkSubarraySum2(int[] nums, int k) {
         int sum = 0;
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();//存储的前缀和 和当时的下标的位置
         map.put(0, -1);
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
