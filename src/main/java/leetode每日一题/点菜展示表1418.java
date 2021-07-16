@@ -3,6 +3,7 @@ package leetode每日一题;
 import org.junit.Test;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -13,6 +14,9 @@ import java.util.stream.Stream;
  * @Created by xjl
  */
 public class 点菜展示表1418 {
+    public static void main(String[] args) {
+
+    }
 
     public List<List<String>> displayTable(List<List<String>> orders) {
         TreeMap<String, Map<String, Integer>> treeMap = new TreeMap<>(new Comparator<String>() {
